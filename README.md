@@ -52,15 +52,20 @@ python -m http.server 8000
 ```
 om-analyzer/
 │
-├── app-page.html               ← The app (do not rename)
-├── app-info.json               ← App settings, overview config
 ├── App.bat                     ← Windows launcher (auto-starts server)
+├── LICENSE                     ← License file
+├── README.md                   ← Documentation
 │
-├── old_question_papers.json    ← Question bank data
-├── repeated_questions.json     ← Repeated/high-frequency questions
-├── syllabus.json               ← Syllabus with frequency data
-│
-└── pu-logo.png                 ← Optional logo (referenced in app-info.json)
+└── src/
+    ├── app-page.html               ← The app (do not rename)
+    ├── app-info.json               ← App settings, overview config
+    │
+    ├── old_question_papers.json    ← Question bank data
+    ├── repeated_questions.json     ← Repeated/high-frequency questions
+    ├── syllabus.json               ← Syllabus with frequency data
+    ├── QB_format.json              ← Template for AI conversion
+    │
+    └── pu-logo.png                 ← Optional logo (referenced in app-info.json)
 ```
 
 > The filenames of the JSON data files are **not fixed** — they are configured inside `app-info.json` under the `content` array.
