@@ -5,7 +5,7 @@ SETLOCAL
 python --version >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     echo Python found. Starting server on port 8000...
-    start "" "http://localhost:8000/src/app-page.html"
+    start "" "msedge.exe" "http://localhost:8000/src/main.html"
     python -m http.server 8000
     goto :end
 )
@@ -14,12 +14,13 @@ IF %ERRORLEVEL% EQU 0 (
 node --version >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     echo Node.js found. Starting server on port 8000...
-    start "" "http://localhost:8000/src/app-page.html"
+    start "" "msedge.exe" "http://localhost:8000/src/main.html"
     npx http-server -p 8000
     goto :end
 )
 
 :: Neither Python nor Node.js found
+start "" "msedge.exe" "src/main.html"
 echo.
 echo ERROR: Neither Python nor Node.js is installed!
 echo.

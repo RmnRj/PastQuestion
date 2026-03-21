@@ -65,9 +65,15 @@
         { "number": "5", "sub_no": "b", "marks": 7, "question": "Analyze a complex software design problem and propose a solution that addresses both functional and non-functional requirements." },
         { "number": "6", "sub_no": "a", "marks": 8, "question": "Discuss the strategies and measures that both governments and consumers can implement to protect sensitive information in the digital age. What is the role of government in protecting information?" },
         { "number": "6", "sub_no": "b", "marks": 7, "question": "Examine the current threat landscape in cybersecurity and discuss the role of digital forensics in responding to cyber incidents. List out the types of digital forensics." },
-        { "number": "7", "sub_no": "a", "marks": 8, "question": "Define Intellectual Property (IP) rights and discuss the necessity of protecting IP. Additionally, analyze the global issues that arise in the context of IP." },
-        { "number": "7", "sub_no": "b", "marks": 7, "question": "Define the concept of policy and discuss the process of formulating national policies. Additionally, provide an overview of five IT-related policies implemented in Nepal." },
-        { "number": "7", "sub_no": "c", "marks": 5, "question": "How can IT professionals protect individual and organizational privacy? Discuss." }
+        {
+          "number": "7",
+          "instruction": "Write short notes on: (Any one) 10",
+          "options": [
+            { "sub_no": "a", "marks": 10, "question": "Define Intellectual Property (IP) rights and discuss the necessity of protecting IP. Additionally, analyze the global issues that arise in the context of IP." },
+            { "sub_no": "b", "marks": 10, "question": "Define the concept of policy and discuss the process of formulating national policies. Additionally, provide an overview of five IT-related policies implemented in Nepal." },
+            { "sub_no": "c", "marks": 10, "question": "How can IT professionals protect individual and organizational privacy? Discuss." }
+          ]
+        }
       ]
     },
     {

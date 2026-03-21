@@ -31,17 +31,17 @@
         "option": "available",
         "files": [
         {
-            "file": "DSAP/old_question_papers.json",
+            "file": "BE_COMPUTER/Sem_VIII/DSAP/old_question_papers.json",
             "name": "Old Question Papers",
             "type": "questions"
         },
         {
-            "file": "DSAP/repeated_questions.json",
+            "file": "BE_COMPUTER/Sem_VIII/DSAP/repeated_questions.json",
             "name": "Repeated Questions",
             "type": "repeated"
         },
         {
-            "file": "DSAP/syllabus.json",
+            "file": "BE_COMPUTER/Sem_VIII/DSAP/syllabus.json",
             "name": "Syllabus with Frequency",
             "type": "syllabus"
         }]
@@ -52,17 +52,17 @@
         "option": "available",
         "files": [
         {
-            "file": "OM/old_question_papers.json",
+            "file": "BE_COMPUTER/Sem_VIII/OM/old_question_papers.json",
             "name": "Old Question Papers",
             "type": "questions"
         },
         {
-            "file": "OM/repeated_questions.json",
+            "file": "BE_COMPUTER/Sem_VIII/OM/repeated_questions.json",
             "name": "Repeated Questions",
             "type": "repeated"
         },
         {
-            "file": "OM/syllabus.json",
+            "file": "BE_COMPUTER/Sem_VIII/OM/syllabus.json",
             "name": "Syllabus with Frequency",
             "type": "syllabus"
         }]
@@ -73,17 +73,17 @@
         "option": "available",
         "files": [
         {
-            "file": "SPIT/old_question_papers.json",
+            "file": "BE_COMPUTER/Sem_VIII/SPIT/old_question_papers.json",
             "name": "Old Question Papers",
             "type": "questions"
         },
         {
-            "file": "SPIT/repeated_questions.json",
+            "file": "BE_COMPUTER/Sem_VIII/SPIT/repeated_questions.json",
             "name": "Repeated Questions",
             "type": "repeated"
         },
         {
-            "file": "SPIT/syllabus.json",
+            "file": "BE_COMPUTER/Sem_VIII/SPIT/syllabus.json",
             "name": "Syllabus with Frequency",
             "type": "syllabus"
         }]
