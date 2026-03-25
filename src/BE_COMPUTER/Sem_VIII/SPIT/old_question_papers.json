@@ -1,4 +1,10 @@
 {
+  "subject": "Social and Professional issues in IT (Old)",
+  "university": "Pokhara University",
+  "level": "Bachelor",
+  "programme": "BE_COMPUTER",
+  "full_marks": 100,
+  "pass_marks": 45,
   "papers": [
     {
       "id": "2025-SP",

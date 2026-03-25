@@ -192,6 +192,58 @@
             white-space: nowrap
         }
 
+        /* SUBJECT INFO BAR */
+        #subject-info {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            position: sticky;
+            top: 52px;
+            z-index: 45
+        }
+
+        #subject-info.hidden {
+            display: none
+        }
+
+        .subj-name {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-1);
+            line-height: 1.2
+        }
+
+        .subj-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center
+        }
+
+        .subj-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        .subj-meta-label {
+            font-size: 10px;
+            color: var(--text-3);
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            font-weight: 600
+        }
+
+        .subj-meta-value {
+            font-size: 13px;
+            color: var(--text-1);
+            font-weight: 500
+        }
+
         /* TABS */
         #tabs {
             background: var(--surface);
@@ -199,7 +251,7 @@
             padding: 0 24px;
             display: flex;
             position: sticky;
-            top: 52px;
+            top: 116px;
             z-index: 40
         }
 
@@ -1351,6 +1403,18 @@
             }
         }
 
+        @media(max-width:760px) {
+            #subject-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px
+            }
+
+            .subj-meta {
+                gap: 12px
+            }
+        }
+
         @media(max-width:540px) {
             #main {
                 padding: 12px
@@ -1422,6 +1486,19 @@
                 <span id="subj-label">Subject</span>
                 <select id="subj-select" onchange="switchSubject(this.value)"></select>
                 <span id="subj-loading">Loading…</span>
+            </div>
+        </div>
+        <div id="subject-info" class="hidden">
+            <div class="subj-name" id="subj-info-name">Select Subject</div>
+            <div class="subj-meta">
+                <div class="subj-meta-item">
+                    <span class="subj-meta-label">University</span>
+                    <span class="subj-meta-value" id="subj-info-uni">—</span>
+                </div>
+                <div class="subj-meta-item">
+                    <span class="subj-meta-label">Programme</span>
+                    <span class="subj-meta-value" id="subj-info-prog">—</span>
+                </div>
             </div>
         </div>
         <div id="tabs"></div>
@@ -1747,6 +1824,22 @@
             S.qp = data.qp; S.rq = data.rq; S.syl = data.syl;
             S.all = S.qp ? flatQ() : [];
             el('subj-select').value = name;
+            renderSubjectInfo();
+        }
+
+        function renderSubjectInfo() {
+            const infoBar = el('subject-info');
+            if (!S.qp) {
+                el('subj-info-name').textContent = 'Select Subject';
+                el('subj-info-uni').textContent = '—';
+                el('subj-info-prog').textContent = '—';
+                infoBar.classList.remove('hidden');
+                return;
+            }
+            el('subj-info-name').textContent = S.qp.subject || 'Select Subject';
+            el('subj-info-uni').textContent = S.qp.university || '—';
+            el('subj-info-prog').textContent = S.qp.programme || '—';
+            infoBar.classList.remove('hidden');
         }
 
         // ════════════════════════════════════════════════════
@@ -1801,6 +1894,7 @@
             el('rq-list').innerHTML = '';
             el('syl-out').innerHTML = '';
             buildTabs();
+            renderSubjectInfo();
         }
 
         // ════════════════════════════════════════════════════
