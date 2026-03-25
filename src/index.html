@@ -202,7 +202,14 @@
             gap: 24px;
             position: sticky;
             top: 52px;
-            z-index: 45
+            z-index: 45;
+            transition: transform .3s ease, opacity .3s ease
+        }
+
+        #subject-info.scroll-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none
         }
 
         #subject-info.hidden {
@@ -252,7 +259,12 @@
             display: flex;
             position: sticky;
             top: 116px;
-            z-index: 40
+            z-index: 40;
+            transition: top .3s ease
+        }
+
+        #tabs.scroll-up {
+            top: 52px
         }
 
         .tab-btn {
@@ -2325,6 +2337,28 @@ git push origin main</div>
         function errorHtml() {
             return `<div style="max-width:480px;margin:24px;font-family:'Source Sans 3',system-ui,sans-serif"><div style="background:#FAEBEB;border:1px solid #F5C0C0;border-radius:6px;padding:20px 24px;margin-bottom:16px"><div style="font-weight:700;font-size:15px;color:#7A1A1A;margin-bottom:4px">⚠ Cannot load app-info.json</div><div style="font-size:13.5px;color:#A03030;line-height:1.5">Browsers block local file reading for security. This app must be served over HTTP.</div></div><div style="background:#fff;border:1px solid #DDD9CE;border-radius:6px;padding:20px 24px"><div style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:#9A9189;margin-bottom:14px">How to run</div><div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</span><div><div style="font-size:13.5px;color:#1A1816;margin-bottom:5px">Open a terminal in this project folder</div></div></div><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</span><div style="width:100%"><div style="font-size:13.5px;color:#1A1816;margin-bottom:6px">Run:</div><div style="background:#1A1816;border-radius:4px;padding:8px 12px"><code style="font-family:monospace;font-size:13px;color:#E8E4DC">python -m http.server 8000</code></div></div></div><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</span><div style="width:100%"><div style="font-size:13.5px;color:#1A1816;margin-bottom:8px">Then open:</div><button onclick="window.location.href='http://localhost:8000/app-page.html'" style="width:100%;padding:10px;background:#2B5EA7;color:#fff;border:none;border-radius:5px;font-family:'Source Sans 3',system-ui,sans-serif;font-size:14px;font-weight:600;cursor:pointer">Open localhost:8000/app-page.html →</button></div></div></div></div></div>`;
         }
+
+        // ════════════════════════════════════════════════════
+        // SCROLL BEHAVIOR
+        // ════════════════════════════════════════════════════
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const subjectInfo = el('subject-info');
+            const tabs = el('tabs');
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down
+                subjectInfo.classList.add('scroll-hidden');
+                tabs.classList.add('scroll-up');
+            } else {
+                // Scrolling up
+                subjectInfo.classList.remove('scroll-hidden');
+                tabs.classList.remove('scroll-up');
+            }
+            
+            lastScroll = currentScroll;
+        });
 
         init();
     </script>
