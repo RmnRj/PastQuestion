@@ -1,4 +1,4 @@
-# OM Analyzer
+# PU Question Paper Analyzer
 
 A static, JSON-driven web app for browsing university exam question papers, filtering questions, viewing repeated questions, and exploring syllabus topic frequency — all without any backend or framework.
 
@@ -8,7 +8,7 @@ A static, JSON-driven web app for browsing university exam question papers, filt
 
 1. [Opening the App](#1-opening-the-app)
 2. [File Structure](#2-file-structure)
-3. [Setting Up a New Analyzer](#3-setting-up-a-new-analyzer)
+3. [Adding a New Subject](#3-adding-a-new-subject)
 4. [JSON Formats](#4-json-formats)
    - [app-info.json](#41-app-infojson--app-settings)
    - [old_question_papers.json](#42-old_question_papersjson--question-bank)
@@ -33,12 +33,20 @@ Just double-click `App.bat`. It will:
 ### Option B — Python (manual)
 
 ```bash
-cd path/to/om-analyzer
+cd path/to/PU-QuestionPaper_Analyzer/src
 python -m http.server 8000
 # Then open: http://localhost:8000/app-page.html
 ```
 
-### Option C — VS Code Live Server
+### Option C — Node.js (manual)
+
+```bash
+cd path/to/PU-QuestionPaper_Analyzer/src
+npx http-server -p 8000
+# Then open: http://localhost:8000/app-page.html
+```
+
+### Option D — VS Code Live Server
 
 1. Install the **Live Server** extension in VS Code
 2. Right-click `app-page.html` → **Open with Live Server**
@@ -50,7 +58,7 @@ python -m http.server 8000
 ## 2. File Structure
 
 ```
-om-analyzer/
+PU-QuestionPaper_Analyzer/
 │
 ├── App.bat                     ← Windows launcher (auto-starts server)
 ├── LICENSE                     ← License file
@@ -59,58 +67,110 @@ om-analyzer/
 └── src/
     ├── app-page.html               ← The app (do not rename)
     ├── app-info.json               ← App settings, overview config
+    ├── pu-logo.png                 ← Optional logo
     │
-    ├── old_question_papers.json    ← Question bank data
-    ├── repeated_questions.json     ← Repeated/high-frequency questions
-    ├── syllabus.json               ← Syllabus with frequency data
-    ├── QB_format.json              ← Template for AI conversion
-    │
-    └── pu-logo.png                 ← Optional logo (referenced in app-info.json)
+    └── BE_COMPUTER/
+        ├── Sem_VIII/
+        │   ├── IS/
+        │   │   ├── old_question_papers.json
+        │   │   ├── repeated_questions.json
+        │   │   ├── syllabus.json
+        │   │   └── img/
+        │   │       ├── 2023-S-6b.png
+        │   │       └── ...
+        │   ├── DSAP/
+        │   ├── O&M/
+        │   └── SPIT/
+        │
+        └── Sem_II/
+            └── Thermal/
+                ├── old_question_papers.json
+                ├── repeated_questions.json
+                ├── syllabus.json
+                └── img/
+                    ├── 2023-S-6b.png
+                    └── ...
 ```
-
-> The filenames of the JSON data files are **not fixed** — they are configured inside `app-info.json` under the `content` array.
 
 ---
 
-## 3. Setting Up a New Analyzer
+## 3. Adding a New Subject
 
-### Step 1 — Copy the template files
+### Step 1 — Clone the Repository
 
-```
-new-course/
-├── app-page.html       ← copy as-is, no changes needed
-├── App.bat             ← copy as-is
-├── app-info.json       ← edit this for your course
-├── questions.json      ← your question bank
-├── repeated.json       ← your repeated questions (optional)
-└── syllabus.json       ← your syllabus (optional)
+**Using HTTPS (recommended):**
+```bash
+git clone https://github.com/RmnRj/PU-QuestionPaper_Analyzer.git
 ```
 
-### Step 2 — Edit `app-info.json`
+**Or using SSH:**
+```bash
+git clone git@github.com:RmnRj/PU-QuestionPaper_Analyzer.git
+```
+
+### Step 2 — Create Folder Structure
+
+Create folders following this pattern:
+```
+src/
+└── BE_COMPUTER/
+    └── Sem_II/
+        └── Thermal/
+            ├── old_question_papers.json
+            ├── repeated_questions.json
+            ├── syllabus.json
+            └── img/
+                ├── 2023-S-6b.png
+                └── ...
+```
+
+**Folder naming rules:**
+- Use meaningful names (e.g., `Thermal`, `IS`, `DSAP`)
+- Match the path in `app-info.json`
+- Create an `img/` subfolder for images
+
+### Step 3 — Register in app-info.json
+
+Add your subject to the `content` array:
 
 ```json
 {
-    "app_name": "Thermodynamics Analyzer",
-    "university": "Tribhuvan University",
-    "program": "BE — Mechanical Engineering",
-    "course": "Engineering Thermodynamics",
-    "course_code": "ME 501",
-    "accent_color": "#B5451B",
-    "content": [
-        { "file": "questions.json", "type": "questions" },
-        { "file": "repeated.json",  "type": "repeated"  },
-        { "file": "syllabus.json",  "type": "syllabus"  }
-    ]
+  "subject": "Thermal",
+  "default": false,
+  "option": "available",
+  "folder": "BE_COMPUTER/Sem_II/Thermal"
 }
 ```
 
-### Step 3 — Add your data files
+**Note:** Just provide the folder path. The app will automatically load `old_question_papers.json`, `repeated_questions.json`, and `syllabus.json` from this folder.
 
-Fill in each JSON file following the formats in [Section 4](#4-json-formats).
+### Step 4 — Create Required JSON Files
 
-### Step 4 — Run and verify
+Each subject folder must contain exactly **3 files**:
 
-Double-click `App.bat`, or run `python -m http.server 8000` and open `http://localhost:8000/app-page.html`.
+1. **old_question_papers.json** — Question bank with all papers
+2. **repeated_questions.json** — Frequently repeated questions
+3. **syllabus.json** — Syllabus with topic frequency
+
+See [Section 4](#4-json-formats) for detailed JSON structure.
+
+### Step 5 — Run Locally
+
+You need **Python** or **Node.js** installed to run a local server.
+
+### Step 6 — Test and Submit Pull Request
+
+1. Test the app locally to ensure your subject loads correctly
+2. Verify all data displays properly and images/tables work
+3. Commit your changes:
+   ```bash
+   git add .
+   git commit -m "Add [Subject Name] question papers"
+   git push origin main
+   ```
+4. Go to https://github.com/RmnRj/PU-QuestionPaper_Analyzer/pulls
+5. Create a pull request from your fork
+6. Include a description of what you added and confirm you tested it
 
 ---
 
@@ -120,11 +180,11 @@ Double-click `App.bat`, or run `python -m http.server 8000` and open `http://loc
 
 ```json
 {
-    "app_name":     "OM Analyzer",
+    "app_name":     "Question Analyzer",
     "app_ic":       "pu-logo.png",
-    "university":   "Pokhara University",
-    "program":      "BE — Computer Engineering",
-    "course":       "Organization & Management",
+    "university":   "PU",
+    "program":      "BE_Computer",
+    "course":       "SPIT",
     "course_code":  "2-0-0",
     "theme":        "light",
     "accent_color": "#2B5EA7",
@@ -144,11 +204,14 @@ Double-click `App.bat`, or run `python -m http.server 8000` and open `http://loc
         { "label": "Peak Repeats",    "value": "auto:peak"      },
         { "label": "Year Span",       "value": "auto:yearspan"  }
     ],
-
+    
     "content": [
-        { "file": "old_question_papers.json", "name": "Old Question Papers", "type": "questions" },
-        { "file": "repeated_questions.json",  "name": "Repeated Questions",  "type": "repeated"  },
-        { "file": "syllabus.json",            "name": "Syllabus with Frequency", "type": "syllabus" }
+        {
+            "subject": "IS",
+            "default": true,
+            "option": "available",
+            "folder": "BE_COMPUTER/Sem_VIII/IS"
+        }
     ]
 }
 ```
@@ -166,128 +229,91 @@ Double-click `App.bat`, or run `python -m http.server 8000` and open `http://loc
 | `accent_color` | hex string | Changes highlight color across the app |
 | `tab_labels` | object | Rename any of the four tabs |
 | `overview` | array | Stats bar configuration (see Section 5) |
-| `content` | array | List of JSON data files to load |
-
-#### `content` item fields
-
-| Field | Value | Description |
-|---|---|---|
-| `file` | filename | Path to the JSON file |
-| `type` | `"questions"`, `"repeated"`, or `"syllabus"` | Tells the app how to parse this file |
-| `name` | string | Optional display name |
+| `content` | array | List of subjects with folder paths |
 
 ---
 
 ### 4.2 `old_question_papers.json` — Question Bank
 
-Contains all exam papers. Each paper has a list of questions.
-
 ```json
 {
-    "papers": [
+  "subject": "Thermal Engineering",
+  "university": "Pokhara University",
+  "programme": "BE — Mechanical Engineering",
+  "level": "Bachelor",
+  "full_marks": 100,
+  "pass_marks": 45,
+  "papers": [
+    {
+      "id": "2024_fall",
+      "year": "2024",
+      "semester": "Fall",
+      "questions": [
         {
-            "id":       "2024_fall",
-            "year":     "2024",
-            "semester": "Fall",
-            "questions": [
-                {
-                    "number": "1",
-                    "sub_no": "a",
-                    "marks":  "7",
-                    "question": "What do you mean by management? Explain the functions of management."
-                },
-                {
-                    "number": "7",
-                    "instruction": "Write short notes on: (Any two)",
-                    "marks":       "10",
-                    "options": [
-                        { "sub_no": "a", "marks": "5", "question": "Employee health and safety" },
-                        { "sub_no": "b", "marks": "5", "question": "Job description" },
-                        { "sub_no": "c", "marks": "5", "question": "Incentives" }
-                    ]
-                }
+          "number": "1",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Define thermodynamics...",
+          "context": "Optional case study",
+          "fig_url": "BE_COMPUTER/Sem_II/Thermal/img/2023-S-6b.png",
+          "table_data": {
+            "headers": ["Column 1", "Column 2"],
+            "rows": [
+              {"col1": "Value 1", "col2": "Value 2"}
             ]
+          }
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
 
-#### Question types
+#### Question Fields
 
-**Type 1 — Regular question**
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `number` | string | Yes | Question number (e.g., "1", "7") |
+| `sub_no` | string | Yes | Sub-part: `"a"`, `"b"`, `"or"` for alternates |
+| `marks` | string/number | Yes | Marks for this question |
+| `question` | string | Yes | Full question text |
+| `context` | string | No | Case study or additional context |
+| `fig_url` | string | No | Relative path to image from `src/` folder |
+| `table_data` | object | No | Table with `headers` and `rows` arrays |
+
+#### Image Rules
+
+- Store images in `img/` subfolder within subject folder
+- Use relative paths from `src/` folder
+- Example: `BE_COMPUTER/Sem_II/Thermal/img/2023-S-6b.png`
+- Supported formats: PNG, JPG, GIF, SVG
+
+#### Table Rules
 
 ```json
-{
-    "number":   "3",
-    "sub_no":   "b",
-    "marks":    "8",
-    "question": "Define human resource management and describe its key functions."
+"table_data": {
+  "headers": ["Header 1", "Header 2", "Header 3"],
+  "rows": [
+    {"col1": "Value 1", "col2": "Value 2", "col3": "Value 3"},
+    {"col1": "Value 4", "col2": "Value 5", "col3": "Value 6"}
+  ]
 }
 ```
-
-| Field | Type | Description |
-|---|---|---|
-| `number` | string | Question number |
-| `sub_no` | string | Sub-part: `"a"`, `"b"`, or `"or"` for alternate questions |
-| `marks` | string | Marks for this sub-question |
-| `question` | string | Full question text |
-
-**Type 2 — Short notes / choice question** (usually Q7)
-
-```json
-{
-    "number":      "7",
-    "instruction": "Write short notes on: (Any two)",
-    "marks":       "10",
-    "options": [
-        { "sub_no": "a", "marks": "5", "question": "Arbitration in conflict management" },
-        { "sub_no": "b", "marks": "5", "question": "Job description and specification" }
-    ]
-}
-```
-
-| Field | Type | Description |
-|---|---|---|
-| `number` | string | Question number |
-| `instruction` | string | Instruction shown as section header |
-| `marks` | string | Total marks for this question block |
-| `options` | array | List of option items (`sub_no`, `marks`, `question`) |
-
-#### OR questions (alternate)
-
-Use `sub_no: "or"` for alternate questions:
-
-```json
-{ "number": "1", "sub_no": "a",  "marks": "7", "question": "What do you mean by management?" },
-{ "number": "1", "sub_no": "or", "marks": "7", "question": "What is organization?" }
-```
-
-#### Paper `id` naming convention
-
-Use `year_semester` in lowercase: `2024_fall`, `2024_spring`, `2023_fall`, etc.
 
 ---
 
 ### 4.3 `repeated_questions.json` — Repeated Questions
 
-Contains questions that appear frequently across multiple papers, used to populate the **Repeated** tab.
-
 ```json
 {
-    "repeated_questions": [
-        {
-            "question": "Define management and explain its functions.",
-            "topic":    "1.1 Meaning and concept of management / 1.2 Functions of management",
-            "freq":     20,
-            "papers":   ["2025_spring", "2024_fall", "2024_spring", "2023_spring"]
-        },
-        {
-            "question": "What are the modes of conflict management? Explain negotiation, mediation, facilitation and arbitration.",
-            "topic":    "6.4 Modes of Conflict Management",
-            "freq":     20,
-            "papers":   ["2025_spring", "2024_fall", "2024_spring"]
-        }
-    ]
+  "repeated_questions": [
+    {
+      "question": "Define management and explain its functions.",
+      "topic": "1.1 Meaning and concept of management",
+      "freq": 20,
+      "papers": ["2025_spring", "2024_fall", "2024_spring"]
+    }
+  ]
 }
 ```
 
@@ -298,52 +324,33 @@ Contains questions that appear frequently across multiple papers, used to popula
 | `freq` | number | Number of papers this question appeared in |
 | `papers` | array | List of paper IDs (matching `id` in `old_question_papers.json`) |
 
-> Questions are typically sorted by `freq` descending. The `papers` array is used to display which exams asked this question.
-
 ---
 
 ### 4.4 `syllabus.json` — Syllabus with Frequency
 
-Contains the course structure, units, topics, and how many times each topic appeared in past papers.
-
 ```json
 {
-    "course_title": "Organization and Management",
-    "course_code":  "2-0-0",
-    "total_hours":  31,
-
-    "course_contents": [
-        {
-            "unit":   1,
-            "title":  "Introduction",
-            "hours":  2,
-            "topics": [
-                { "topic": "1.1 Meaning and concept of management", "frequency": 20 },
-                { "topic": "1.2 Functions of management",           "frequency": 15 }
-            ]
-        }
-    ],
-
-    "references": [
-        "Harold Koontz and Heinz Weihrich, Essentials of Management"
-    ]
+  "course_title": "Thermal Engineering",
+  "course_code": "ME 501",
+  "total_hours": 45,
+  "course_contents": [
+    {
+      "unit": 1,
+      "title": "Introduction to Thermodynamics",
+      "hours": 3,
+      "topics": [
+        { "topic": "1.1 Basic concepts", "frequency": 15 },
+        { "topic": "1.2 First law", "frequency": 12 }
+      ]
+    }
+  ],
+  "references": [
+    "Smith, Van Ness, Abbott - Introduction to Chemical Engineering Thermodynamics"
+  ]
 }
 ```
 
-| Field | Type | Description |
-|---|---|---|
-| `course_title` | string | Full course name |
-| `course_code` | string | Credit hours code |
-| `total_hours` | number | Total lecture hours |
-| `course_contents` | array | List of units |
-| `unit` | number | Unit number |
-| `title` | string | Unit title |
-| `hours` | number | Hours allocated to this unit |
-| `topics` | array | List of topics (`topic`, `frequency`) |
-| `frequency` | number | Times this topic appeared in past papers |
-| `references` | array | Recommended books (optional) |
-
-#### Frequency color classification
+#### Frequency Color Classification
 
 | Percentage of max frequency | Color | Label |
 |---|---|---|
@@ -382,94 +389,51 @@ Remove the `"overview"` key entirely to hide the stats bar.
 
 ## 6. Converting Question Papers to JSON Using AI
 
-You can use AI models like Claude or Grok to automatically convert question papers (PDF, images, or text) into the required JSON format.
+Use **Claude Sonnet 4.6 (Extended Thinking)** or **Grok AI (Expert Mode)** to automatically convert question papers to JSON format.
 
-### AI Model Links
+### AI Models
 
-- **Claude Sonnet 4.6 (Extended Thinking):** https://claude.ai
-- **Grok (Expert Mode):** https://x.ai/grok
+- **Claude Sonnet 4.6 (Extended Thinking):** [Open Claude](https://claude.ai/)
+- **Grok AI (Expert Mode):** [Open Grok](https://grok.com/)
 
 ### Step-by-Step Process
 
-#### Step 1 — Prepare the format template
+#### Step 1 — Copy the format example
 
-Copy the format template from `QB_format.json` (or create one):
+Copy the JSON format from Section 4.2 (old_question_papers.json example).
 
-```json
-{
-    "papers": [
-        {
-            "id": "2024_fall",
-            "year": "2024",
-            "semester": "Fall",
-            "questions": [
-                {
-                    "number": "1",
-                    "sub_no": "a", "marks": "7", "question": ""
-                },
-                {
-                    "number": "1",
-                    "sub_no": "or", "marks": "7", "question": ""
-                },
-                {
-                    "number": "7",
-                    "instruction": "Write short notes on: (Any two)",
-                    "marks": "10",
-                    "options": [
-                        { "sub_no": "a", "marks": "5", "question": "" },
-                        { "sub_no": "b", "marks": "5", "question": "" }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+#### Step 2 — Open AI model
 
-#### Step 2 — Upload question paper to AI
+Click one of the links above to open Claude or Grok in a new tab.
 
-1. Open Claude (https://claude.ai) or Grok (https://x.ai/grok)
-2. Upload your question paper file (PDF, image, or paste text)
-3. Paste the format template from Step 1
+#### Step 3 — Upload and prompt
 
-#### Step 3 — Prompt the AI
-
-Use this prompt:
+1. Upload your question paper (PDF, image, or paste text)
+2. Paste this prompt:
 
 ```
-Convert this question paper into JSON format following the template below.
-Use the exact structure and field names.
+Convert this question paper to JSON following this exact format:
 
-[Paste QB_format.json here]
+[Paste the format example here]
 
 Rules:
 - Use "id": "YYYY_semester" (e.g. "2024_fall")
-- Regular questions: {"number", "sub_no", "marks", "question"}
-- OR questions: use "sub_no": "or"
-- Short notes (Q7): use {"number", "instruction", "marks", "options": [...]}
+- Extract all questions with number, sub_no, marks, question text
+- For OR questions use "sub_no": "or"
+- For short notes (Q7) use "options" array
 - Extract full question text accurately
 ```
 
-#### Step 4 — Review and save
+#### Step 4 — Validate and save
 
-1. AI will generate the JSON output
-2. Copy the JSON response
-3. Validate it using a JSON validator (https://jsonlint.com)
-4. Save to `old_question_papers.json` or merge with existing papers
+1. Copy the AI-generated JSON
+2. Save as `old_question_papers.json` in your subject folder
 
-### Recommended Models
+#### Step 5 — Create other files
 
-| Model | Best For | Notes |
-|---|---|---|
-| **Claude Sonnet 4** | High accuracy, complex papers | Handles images and PDFs well |
-| **Grok (Expert mode)** | Fast conversion, simple papers | Good for text-based papers |
-
-### Tips for Better Results
-
-- Use high-quality scans or clear images
-- If the paper has multiple pages, upload all at once
-- Review the output for any OCR errors or misformatted questions
-- For large question banks, convert one paper at a time
+Repeat the process for:
+- `repeated_questions.json` — Use format from Section 4.3
+- `syllabus.json` — Use format from Section 4.4
 
 ---
 
@@ -481,13 +445,15 @@ Rules:
 
 ```json
 {
-    "id": "2025_fall", "year": "2025", "semester": "Fall",
-    "questions": [ ... ]
+  "id": "2025_fall",
+  "year": "2025",
+  "semester": "Fall",
+  "questions": [ ... ]
 }
 ```
 
-2. Update `freq` and `papers` arrays in `repeated_questions.json` for any questions that appeared.
-3. Update `frequency` counts in `syllabus.json` for affected topics.
+2. Update `freq` and `papers` arrays in `repeated_questions.json`
+3. Update `frequency` counts in `syllabus.json`
 
 ### Frequency counting rule
 
@@ -504,21 +470,11 @@ Rules:
 
 ```json
 "tab_labels": {
-    "questions": "Q Bank",
-    "papers":    "Past Papers",
-    "repeated":  "Hot Topics",
-    "syllabus":  "Chapters"
+  "questions": "Q Bank",
+  "papers":    "Past Papers",
+  "repeated":  "Hot Topics",
+  "syllabus":  "Chapters"
 }
-```
-
-### Using without optional tabs
-
-Remove entries from `content[]` — their tabs will not appear:
-
-```json
-"content": [
-    { "file": "questions.json", "type": "questions" }
-]
 ```
 
 ### Browser compatibility
@@ -533,12 +489,18 @@ Works in all modern browsers (Chrome, Firefox, Edge, Safari). No build step, no 
 
 - Make sure you're using a local server (not opening `app-page.html` directly)
 - Check browser console (F12) for errors
-- Verify all JSON files are in the same folder as `app-page.html`
+- Verify all JSON files are in the correct folders
 
 ### JSON syntax errors
 
-- Validate your JSON files at https://jsonlint.com
 - Common issues: missing commas, trailing commas, unescaped quotes
+- Check browser console (F12) for specific error messages
+
+### Images not loading
+
+- Verify image paths are relative from `src/` folder
+- Check that images exist in the `img/` subfolder
+- Use forward slashes `/` in paths, not backslashes
 
 ### Port 8000 already in use
 
@@ -547,4 +509,17 @@ Works in all modern browsers (Chrome, Firefox, Edge, Safari). No build step, no 
 
 ---
 
-*Built for Pokhara University — BE Computer Engineering · Organization & Management*
+## Contributing
+
+To add a new subject:
+
+1. Fork the repository
+2. Create a new folder following the structure
+3. Add your JSON files (old_question_papers.json, repeated_questions.json, syllabus.json)
+4. Register in `app-info.json`
+5. Test locally to ensure everything works
+6. Submit a pull request to https://github.com/RmnRj/PU-QuestionPaper_Analyzer/pulls
+
+---
+
+*Built for Pokhara University — Question Paper Analysis Tool*

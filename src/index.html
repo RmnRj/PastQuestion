@@ -1570,40 +1570,28 @@
             <div class="tab-pane" id="pane-guide">
                 <div class="guide-wrap">
                     <div class="guide-intro">
-                        <p>Follow these steps to set up a new analyzer or add a new subject. You only need a text editor
-                            and your question paper files — no coding required.</p>
+                        <p><strong>Add New Subject</strong> — Follow these steps to add a new subject to the analyzer. You only need a text editor and your question paper files — no coding required. Clone the repository from GitHub and add your subject data.</p>
+                        <p style="margin-top:12px;padding:12px;background:var(--green-bg);border-left:3px solid var(--green);border-radius:var(--r);font-size:13px;color:var(--text-1)">
+                            <strong>Contribute:</strong> Help us grow this analyzer! Add your university's question papers, improve the codebase, or suggest new features. Your contributions make this tool better for everyone.
+                        </p>
+                        <p style="margin-top:12px;padding:12px;background:var(--accent-bg);border-left:3px solid var(--accent);border-radius:var(--r);font-size:13px;color:var(--text-1)">
+                            <strong>AI Assistance:</strong> Use <strong>Claude Sonnet 4.6 (Extended Thinking)</strong> or <strong>Grok AI (Expert Mode)</strong> to convert PDFs/images to JSON format automatically.
+                        </p>
                     </div>
 
                     <div class="guide-section open" id="gs-1">
                         <div class="guide-section-hdr" onclick="togGuide(1)">
                             <span class="gs-num">Step 1</span>
-                            <span class="gs-title">Understand the folder structure</span>
+                            <span class="gs-title">GitHub Repository</span>
                             <span class="gs-chev">&#9654;</span>
                         </div>
                         <div class="guide-section-body">
                             <div class="guide-step">
                                 <div class="gs-dot">1</div>
                                 <div class="gs-content">
-                                    <div class="gs-label">Each subject lives in its own subfolder</div>
-                                    <div class="gs-code">project/
-                                        ├── app-page.html
-                                        ├── App.bat
-                                        ├── app-info.json
-                                        ├── pu-logo.png
-                                        ├── DSAP/
-                                        │ ├── old_question_papers.json
-                                        │ ├── repeated_questions.json
-                                        │ └── syllabus.json
-                                        ├── OM/
-                                        │ ├── old_question_papers.json
-                                        │ ├── repeated_questions.json
-                                        │ └── syllabus.json
-                                        └── SPIT/
-                                        ├── old_question_papers.json
-                                        ├── repeated_questions.json
-                                        └── syllabus.json</div>
-                                    <div class="gs-note">The subfolder name must match the path used in app-info.json
-                                        under each subject's "files" array.</div>
+                                    <div class="gs-label">Clone the repository</div>
+                                    <div class="gs-desc">Visit the GitHub repository to clone the project and start adding your subject.</div>
+                                    <button onclick="window.open('https://github.com/RmnRj/PU-QuestionPaper_Analyzer','_blank')" style="padding:8px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;margin-top:8px;transition:background .2s">Open GitHub Repository →</button>
                                 </div>
                             </div>
                         </div>
@@ -1612,50 +1600,31 @@
                     <div class="guide-section open" id="gs-2">
                         <div class="guide-section-hdr" onclick="togGuide(2)">
                             <span class="gs-num">Step 2</span>
-                            <span class="gs-title">Edit app-info.json — register subjects</span>
+                            <span class="gs-title">Folder Structure</span>
                             <span class="gs-chev">&#9654;</span>
                         </div>
                         <div class="guide-section-body">
                             <div class="guide-step">
                                 <div class="gs-dot">1</div>
                                 <div class="gs-content">
-                                    <div class="gs-label">Each subject entry has three fields</div>
-                                    <div class="gs-code">{
-                                        "subject": "DSAP",
-                                        "option": "default",
-                                        "files": [
-                                        { "file": "DSAP/old_question_papers.json", "type": "questions" },
-                                        { "file": "DSAP/repeated_questions.json", "type": "repeated" },
-                                        { "file": "DSAP/syllabus.json", "type": "syllabus" }
-                                        ]
-                                        }</div>
-                                </div>
-                            </div>
-                            <div class="guide-step">
-                                <div class="gs-dot">2</div>
-                                <div class="gs-content">
-                                    <div class="gs-label">The "option" field controls how each subject is loaded</div>
-                                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:2px">
-                                        <div style="display:flex;align-items:flex-start;gap:10px">
-                                            <span class="opt-badge opt-default">default</span>
-                                            <span class="gs-desc" style="margin:0">Loaded automatically on startup.
-                                                Shown first in the subject selector. Only one subject should use
-                                                this.</span>
-                                        </div>
-                                        <div style="display:flex;align-items:flex-start;gap:10px">
-                                            <span class="opt-badge opt-available">available</span>
-                                            <span class="gs-desc" style="margin:0">Shown in the subject selector but not
-                                                loaded until the user selects it. Files are cached after the first
-                                                load.</span>
-                                        </div>
-                                        <div style="display:flex;align-items:flex-start;gap:10px">
-                                            <span class="opt-badge opt-skip">anything else</span>
-                                            <span class="gs-desc" style="margin:0">Not shown in the selector, never
-                                                loaded. Use <span class="gs-ic">"not available"</span>, <span
-                                                    class="gs-ic">"wip"</span>, or any other string to hide a
-                                                subject.</span>
-                                        </div>
-                                    </div>
+                                    <div class="gs-label">Folder structure for subjects</div>
+                                    <div class="gs-code">src/
+├── BE_COMPUTER/
+│   ├── Sem_VIII/
+│   │   ├── IS/
+│   │   │   ├── old_question_papers.json
+│   │   │   ├── repeated_questions.json
+│   │   │   ├── syllabus.json
+│   │   │   └── img/
+│   │   │       └── 2023-S-6b.png
+│   │   └── DSAP/
+│   └── Sem_II/
+│       └── Thermal/
+│           ├── old_question_papers.json
+│           ├── repeated_questions.json
+│           ├── syllabus.json
+│           └── img/</div>
+                                    <div class="gs-note"><strong>Required Files:</strong> Each subject folder must contain exactly 3 files: <span class="gs-ic">old_question_papers.json</span>, <span class="gs-ic">repeated_questions.json</span>, and <span class="gs-ic">syllabus.json</span>. Create an <span class="gs-ic">img/</span> subfolder for images.</div>
                                 </div>
                             </div>
                         </div>
@@ -1664,39 +1633,21 @@
                     <div class="guide-section open" id="gs-3">
                         <div class="guide-section-hdr" onclick="togGuide(3)">
                             <span class="gs-num">Step 3</span>
-                            <span class="gs-title">Add a new subject</span>
+                            <span class="gs-title">Register in app-info.json</span>
                             <span class="gs-chev">&#9654;</span>
                         </div>
                         <div class="guide-section-body">
                             <div class="guide-step">
                                 <div class="gs-dot">1</div>
                                 <div class="gs-content">
-                                    <div class="gs-label">Create a subfolder with the subject name</div>
-                                    <div class="gs-desc">e.g. create a folder called <span class="gs-ic">THERMO</span>
-                                        inside the project folder.</div>
-                                </div>
-                            </div>
-                            <div class="guide-step">
-                                <div class="gs-dot">2</div>
-                                <div class="gs-content">
-                                    <div class="gs-label">Register the subject in app-info.json</div>
+                                    <div class="gs-label">Add subject folder path to app-info.json</div>
                                     <div class="gs-code">{
-                                        "subject": "THERMO",
-                                        "option": "available",
-                                        "files": [
-                                        { "file": "THERMO/old_question_papers.json", "type": "questions" },
-                                        { "file": "THERMO/repeated_questions.json", "type": "repeated" },
-                                        { "file": "THERMO/syllabus.json", "type": "syllabus" }
-                                        ]
-                                        }</div>
-                                </div>
-                            </div>
-                            <div class="guide-step">
-                                <div class="gs-dot">3</div>
-                                <div class="gs-content">
-                                    <div class="gs-label">Validate and save the three JSON files</div>
-                                    <div class="gs-desc">Check each file at <span class="gs-ic">jsonlint.com</span>,
-                                        then save as the paths above.</div>
+  "subject": "Thermal",
+  "default": false,
+  "option": "available",
+  "folder": "BE_COMPUTER/Sem_II/Thermal"
+}</div>
+                                    <div class="gs-note">Just provide the folder path. The app will automatically load <span class="gs-ic">old_question_papers.json</span>, <span class="gs-ic">repeated_questions.json</span>, and <span class="gs-ic">syllabus.json</span> from this folder. Set <span class="gs-ic">"default": true</span> for the subject to load on startup.</div>
                                 </div>
                             </div>
                         </div>
@@ -1705,27 +1656,137 @@
                     <div class="guide-section open" id="gs-4">
                         <div class="guide-section-hdr" onclick="togGuide(4)">
                             <span class="gs-num">Step 4</span>
-                            <span class="gs-title">Run the app</span>
+                            <span class="gs-title">JSON Data Files</span>
                             <span class="gs-chev">&#9654;</span>
                         </div>
                         <div class="guide-section-body">
                             <div class="guide-step">
                                 <div class="gs-dot">1</div>
                                 <div class="gs-content">
-                                    <div class="gs-label">Windows — double-click App.bat</div>
-                                    <div class="gs-desc">It starts a local server and opens the app automatically.</div>
+                                    <div class="gs-label">File 1: old_question_papers.json</div>
+                                    <div class="gs-code">{
+  "subject": "Thermal Engineering",
+  "university": "Pokhara University",
+  "programme": "BE — Mechanical Engineering",
+  "level": "Bachelor",
+  "full_marks": 100,
+  "pass_marks": 45,
+  "papers": [ ... ]
+}</div>
+                                    <div class="gs-note">The <span class="gs-ic">subject</span>, <span class="gs-ic">university</span>, and <span class="gs-ic">programme</span> fields are displayed in the Subject Information Bar.</div>
                                 </div>
                             </div>
                             <div class="guide-step">
                                 <div class="gs-dot">2</div>
                                 <div class="gs-content">
-                                    <div class="gs-label">Any OS — run a server manually</div>
-                                    <div class="gs-code">python -m http.server 8000</div>
-                                    <div class="gs-desc">Then open <span
-                                            class="gs-ic">http://localhost:8000/app-page.html</span> in your browser.
+                                    <div class="gs-label">File 2: repeated_questions.json</div>
+                                    <div class="gs-code">{
+  "repeated_questions": [
+    {
+      "question": "Define management...",
+      "topic": "1.1 Meaning and concept",
+      "freq": 20,
+      "papers": ["2025_spring", "2024_fall"]
+    }
+  ]
+}</div>
+                                    <div class="gs-note">Contains questions that appear frequently across multiple papers with their frequency count.</div>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="gs-dot">3</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">File 3: syllabus.json</div>
+                                    <div class="gs-code">{
+  "course_title": "Thermal Engineering",
+  "course_code": "ME 501",
+  "total_hours": 45,
+  "course_contents": [
+    {
+      "unit": 1,
+      "title": "Introduction",
+      "hours": 3,
+      "topics": [
+        { "topic": "1.1 Basic concepts", "frequency": 15 }
+      ]
+    }
+  ]
+}</div>
+                                    <div class="gs-note">Contains syllabus with frequency count for each topic showing how many times it appeared in papers.</div>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="gs-dot">4</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">Use AI to generate JSON files</div>
+                                    <div class="gs-desc"><strong>Step 1:</strong> Copy the format example from above</div>
+                                    <div class="gs-desc" style="margin-top:8px"><strong>Step 2:</strong> Open AI model in new tab:</div>
+                                    <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+                                        <button onclick="window.open('https://claude.ai/','_blank')" style="padding:8px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;transition:background .2s">Claude Sonnet 4.6 (Extended Thinking) →</button>
+                                        <button onclick="window.open('https://grok.com/','_blank')" style="padding:8px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;transition:background .2s">Grok AI (Expert Mode) →</button>
                                     </div>
-                                    <div class="gs-note">Do not open app-page.html by double-clicking — the browser will
-                                        block JSON loading for security reasons.</div>
+                                    <div class="gs-desc" style="margin-top:8px"><strong>Step 3:</strong> Upload your PDF/image and paste this prompt:</div>
+                                    <div class="gs-code" style="margin-top:8px">Convert this question paper to JSON following this exact format:
+
+[Paste the format example here]
+
+Rules:
+- Use "id": "YYYY_semester" (e.g. "2024_fall")
+- Extract all questions with number, sub_no, marks, question text
+- For OR questions use "sub_no": "or"
+- Extract full question text accurately</div>
+                                    <div class="gs-desc" style="margin-top:8px"><strong>Step 4:</strong> Copy the AI-generated JSON and save to your subject folder with the exact file name</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-section open" id="gs-5">
+                        <div class="guide-section-hdr" onclick="togGuide(5)">
+                            <span class="gs-num">Step 5</span>
+                            <span class="gs-title">Test Locally</span>
+                            <span class="gs-chev">&#9654;</span>
+                        </div>
+                        <div class="guide-section-body">
+                            <div class="guide-step">
+                                <div class="gs-dot">1</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">Requirements</div>
+                                    <div class="gs-desc">You need either <strong>Python</strong> or <strong>Node.js</strong> installed on your system to run a local server.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-section open" id="gs-6">
+                        <div class="guide-section-hdr" onclick="togGuide(6)">
+                            <span class="gs-num">Step 6</span>
+                            <span class="gs-title">Submit Pull Request</span>
+                            <span class="gs-chev">&#9654;</span>
+                        </div>
+                        <div class="guide-section-body">
+                            <div class="guide-step">
+                                <div class="gs-dot">1</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">Test your changes locally</div>
+                                    <div class="gs-desc">Run the app locally and verify that your subject loads correctly, all data displays properly, and images/tables work as expected.</div>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="gs-dot">2</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">Commit your changes</div>
+                                    <div class="gs-code">git add .
+git commit -m "Add [Subject Name] question papers"
+git push origin main</div>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="gs-dot">3</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">Submit pull request to main repository</div>
+                                    <div class="gs-desc">Go to the main GitHub repository and create a pull request from your fork. Include a description of what subject you added and confirm that you tested it locally.</div>
+                                    <button onclick="window.open('https://github.com/RmnRj/PU-QuestionPaper_Analyzer/pulls','_blank')" style="padding:8px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;margin-top:8px;transition:background .2s">Create Pull Request →</button>
                                 </div>
                             </div>
                         </div>
@@ -1792,12 +1853,38 @@
 
         async function switchSubject(name) {
             if (name === S.activeSubject) return;
+            
+            // Clear old data immediately
+            S.qp = null;
+            S.rq = null;
+            S.syl = null;
+            S.all = [];
+            S.activeSubject = name;
+            
+            // Show default subject info immediately
+            renderSubjectInfo();
+            
+            // Clear all content
+            el('res-info').textContent = '';
+            el('q-list').innerHTML = '';
+            el('pp-year').innerHTML = '';
+            el('paper-out').innerHTML = '';
+            el('rq-list').innerHTML = '';
+            el('syl-out').innerHTML = '';
+            el('stats-bar').innerHTML = '';
+            
+            // Show loading indicator
             el('subj-loading').style.display = '';
             el('subj-select').disabled = true;
+            
+            // Load new subject data
             await loadSubject(name);
-            resetTabState();
+            
+            // Rebuild tabs and render new data
+            buildTabs();
             const activeTab = qs('.tab-btn.active');
             if (activeTab) goTab(activeTab.dataset.t, true);
+            
             el('subj-loading').style.display = 'none';
             el('subj-select').disabled = false;
         }
@@ -1805,15 +1892,18 @@
         async function loadSubject(name) {
             if (S.cache[name]) { applyData(name, S.cache[name]); return; }
             const entry = (S.cfg.content || []).find(c => c.subject === name);
-            if (!entry) return;
+            if (!entry || !entry.folder) return;
             const data = { qp: null, rq: null, syl: null };
-            for (const item of (entry.files || [])) {
+            const files = [
+                { path: `${entry.folder}/old_question_papers.json`, key: 'qp', check: d => d.papers },
+                { path: `${entry.folder}/repeated_questions.json`, key: 'rq', check: d => d.repeated_questions },
+                { path: `${entry.folder}/syllabus.json`, key: 'syl', check: d => d.course_contents }
+            ];
+            for (const item of files) {
                 try {
-                    const d = await get(item.file);
-                    if (d.papers) data.qp = d;
-                    if (d.repeated_questions) data.rq = d;
-                    if (d.course_contents) data.syl = d;
-                } catch (e) { console.warn('Could not load', item.file, e); }
+                    const d = await get(item.path);
+                    if (item.check(d)) data[item.key] = d;
+                } catch (e) { console.warn('Could not load', item.path, e); }
             }
             S.cache[name] = data;
             applyData(name, data);
@@ -1829,7 +1919,7 @@
 
         function renderSubjectInfo() {
             const infoBar = el('subject-info');
-            if (!S.qp) {
+            if (!S.qp || S.activeSubject === 'Choose Subject') {
                 el('subj-info-name').textContent = 'Select Subject';
                 el('subj-info-uni').textContent = '—';
                 el('subj-info-prog').textContent = '—';
@@ -1869,7 +1959,7 @@
             if (S.qp) tabs.push({ id: 'papers', label: lbl.papers || 'Papers' });
             if (S.rq) tabs.push({ id: 'repeated', label: lbl.repeated || 'Repeated' });
             if (S.syl) tabs.push({ id: 'syllabus', label: lbl.syllabus || 'Syllabus' });
-            tabs.push({ id: 'guide', label: lbl.guide || 'Setup Guide' });
+            tabs.push({ id: 'guide', label: lbl.guide || 'Add Subject Guide' });
             qs('#tabs').innerHTML = tabs.map(t =>
                 `<button class="tab-btn" data-t="${t.id}" onclick="goTab('${t.id}')">${t.label}</button>`
             ).join('');
@@ -1887,14 +1977,6 @@
 
         function resetTabState() {
             S.f = { year: '', sem: '', qno: '', sub: '', marks: '' };
-            el('res-info').textContent = '';
-            el('q-list').innerHTML = '';
-            el('pp-year').innerHTML = '';
-            el('paper-out').innerHTML = '';
-            el('rq-list').innerHTML = '';
-            el('syl-out').innerHTML = '';
-            buildTabs();
-            renderSubjectInfo();
         }
 
         // ════════════════════════════════════════════════════
@@ -2227,7 +2309,13 @@
         // ════════════════════════════════════════════════════
         // GUIDE TAB
         // ════════════════════════════════════════════════════
-        function togGuide(n) { el('gs-' + n).classList.toggle('open'); }
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
 
         // ════════════════════════════════════════════════════
         // ERROR SCREEN

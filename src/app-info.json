@@ -1,134 +1,65 @@
 {
-    "app_name":     "Question Analyzer",
-    "app_ic":       "pu-logo.png",
-    "university":   "PU",
-    "program":      "BE_Computer",
-    "course":       "SPIT",
-    "course_code":  "2-0-0",
-    "theme":        "light",
+    "app_name": "Question Analyzer",
+    "app_ic": "pu-logo.png",
+    "university": "PU",
+    "program": "BE_Computer",
+    "course": "SPIT",
+    "course_code": "2-0-0",
+    "theme": "light",
     "accent_color": "#2B5EA7",
 
     "tab_labels": {
         "questions": "Questions",
-        "papers":    "Papers",
-        "repeated":  "Repeated",
-        "syllabus":  "Syllabus"
+        "papers": "Papers",
+        "repeated": "Repeated",
+        "syllabus": "Syllabus"
     },
 
     "overview": [
-        { "label": "Papers",          "value": "auto:papers"    },
-        { "label": "Questions",       "value": "auto:questions" },
-        { "label": "Chapters",        "value": "auto:chapters"  },
-        { "label": "Syllabus Topics", "value": "auto:topics"    },
-        { "label": "Peak Repeats",    "value": "auto:peak"      },
-        { "label": "Year Span",       "value": "auto:yearspan"  }
+        { "label": "Papers", "value": "auto:papers" },
+        { "label": "Questions", "value": "auto:questions" },
+        { "label": "Chapters", "value": "auto:chapters" },
+        { "label": "Syllabus Topics", "value": "auto:topics" },
+        { "label": "Peak Repeats", "value": "auto:peak" },
+        { "label": "Year Span", "value": "auto:yearspan" }
     ],
-    
+
     "content": [
         {
-        "subject": "IS",
-        "default": true,
-        "option": "available",
-        "files": [
-        {
-            "file": "BE_COMPUTER/Sem_VIII/IS/old_question_papers.json",
-            "name": "Old Question Papers",
-            "type": "questions"
+            "subject": "Choose Subject",
+            "default": true,
+            "option": "available",
+            "folder": "None"
         },
         {
-            "file": "BE_COMPUTER/Sem_VIII/IS/repeated_questions.json",
-            "name": "Repeated Questions",
-            "type": "repeated"
+            "subject": "IS",
+            "default": false,
+            "option": "available",
+            "folder": "BE_COMPUTER/Sem_VIII/IS"
         },
         {
-            "file": "BE_COMPUTER/Sem_VIII/IS/syllabus.json",
-            "name": "Syllabus with Frequency",
-            "type": "syllabus"
-        }]
-    },
-        {
-        "subject": "DSAP",
-        "default": false,
-        "option": "available",
-        "files": [
-        {
-            "file": "BE_COMPUTER/Sem_VIII/DSAP/old_question_papers.json",
-            "name": "Old Question Papers",
-            "type": "questions"
+            "subject": "DSAP",
+            "default": false,
+            "option": "available",
+            "folder": "BE_COMPUTER/Sem_VIII/DSAP"
         },
         {
-            "file": "BE_COMPUTER/Sem_VIII/DSAP/repeated_questions.json",
-            "name": "Repeated Questions",
-            "type": "repeated"
+            "subject": "O&M",
+            "default": false,
+            "option": "available",
+            "folder": "BE_COMPUTER/Sem_VIII/OM"
         },
         {
-            "file": "BE_COMPUTER/Sem_VIII/DSAP/syllabus.json",
-            "name": "Syllabus with Frequency",
-            "type": "syllabus"
-        }]
-    },
-    {
-        "subject": "O&M",
-        "default": false,
-        "option": "available",
-        "files": [
-        {
-            "file": "BE_COMPUTER/Sem_VIII/OM/old_question_papers.json",
-            "name": "Old Question Papers",
-            "type": "questions"
+            "subject": "SPIT",
+            "default": false,
+            "option": "available",
+            "folder": "BE_COMPUTER/Sem_VIII/SPIT"
         },
         {
-            "file": "BE_COMPUTER/Sem_VIII/OM/repeated_questions.json",
-            "name": "Repeated Questions",
-            "type": "repeated"
-        },
-        {
-            "file": "BE_COMPUTER/Sem_VIII/OM/syllabus.json",
-            "name": "Syllabus with Frequency",
-            "type": "syllabus"
-        }]
-    },
-    {
-        "subject": "SPIT",
-        "default": false,
-        "option": "available",
-        "files": [
-        {
-            "file": "BE_COMPUTER/Sem_VIII/SPIT/old_question_papers.json",
-            "name": "Old Question Papers",
-            "type": "questions"
-        },
-        {
-            "file": "BE_COMPUTER/Sem_VIII/SPIT/repeated_questions.json",
-            "name": "Repeated Questions",
-            "type": "repeated"
-        },
-        {
-            "file": "BE_COMPUTER/Sem_VIII/SPIT/syllabus.json",
-            "name": "Syllabus with Frequency",
-            "type": "syllabus"
-        }]
-    },
-    {
-        "subject": "Thermal",
-        "default": false,
-        "option": "available",
-        "files": [
-        {
-            "file": "BE_COMPUTER/Sem_II/Thermal/old_question_papers.json",
-            "name": "Old Question Papers",
-            "type": "questions"
-        },
-        {
-            "file": "BE_COMPUTER/Sem_II/Thermal/repeated_questions.json",
-            "name": "Repeated Questions",
-            "type": "repeated"
-        },
-        {
-            "file": "BE_COMPUTER/Sem_II/Thermal/syllabus.json",
-            "name": "Syllabus with Frequency",
-            "type": "syllabus"
-        }]
-    }
+            "subject": "Thermal",
+            "default": false,
+            "option": "available",
+            "folder": "BE_COMPUTER/Sem_II/Thermal"
+        }
     ]
 }

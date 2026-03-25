@@ -7,30 +7,38 @@
             "questions": [
                 {
                     "number": "1",
-                    "sub_no": "a", "marks": "7", "question" : ""
+                    "sub_no": "a",
+                    "marks": "7",
+                    "question": ""
                 },
                 {
                     "number": "1",
-                    "sub_no": "b", "marks": "8", "question" : ""
+                    "sub_no": "b",
+                    "marks": "8",
+                    "question": ""
                 },
                 {
                     "number": "1",
-                    "sub_no": "or", "marks": "8", "question" : ""
+                    "sub_no": "or",
+                    "marks": "8",
+                    "question": ""
                 },
                 {
                     "number": "7",
+                    "marks": "10",
+                    "instruction": "",
                     "options": [
                         {
                             "sub_no": "a",
                             "marks": "5",
-                            "question" : ""
+                            "question": ""
                         },
                         {
                             "sub_no": "b",
                             "marks": "5",
-                            "question" : ""
+                            "question": ""
                         }
-                    ], "marks": "10", "instruction" : ""
+                    ]
                 }
             ]
         },
@@ -41,15 +49,21 @@
             "questions": [
                 {
                     "number": "1",
-                    "sub_no": "a", "marks": "7", "question" : ""
+                    "sub_no": "a",
+                    "marks": "7",
+                    "question": ""
                 },
                 {
                     "number": "1",
-                    "sub_no": "b", "marks": "8", "question" : ""
+                    "sub_no": "b",
+                    "marks": "8",
+                    "question": ""
                 },
                 {
                     "number": "1",
-                    "sub_no": "or", "marks": "8", "question" : ""
+                    "sub_no": "or",
+                    "marks": "8",
+                    "question": ""
                 }
             ]
         }
