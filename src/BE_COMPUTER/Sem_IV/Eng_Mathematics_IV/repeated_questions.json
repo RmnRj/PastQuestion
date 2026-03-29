@@ -1,124 +1,227 @@
 {
   "repeated_questions": [
     {
-      "question": "What is cloud computing? Difference between IaaS, PaaS and SaaS.",
-      "topic": "8.2 Cloud computing technologies and their types — IaaS, PaaS, SaaS",
-      "freq": 14,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_spring","2016_fall"]
+      "question": "Define harmonic function. Show that a given function u(x, y) is harmonic. Find its harmonic conjugate v and the corresponding analytic function f(z) = u + iv.",
+      "topic": "1.3 Harmonic Functions — harmonic conjugate, analytic function",
+      "freq": 21,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA",
+        "2021-FA", "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA",
+        "2018-SP", "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA",
+        "2015-SP", "2014-FA", "2014-SP"
+      ]
     },
     {
-      "question": "Define Hadoop System and its components. Explain in details about working mechanism of Map Reduce for voluminous data.",
-      "topic": "8.3 Map Reduce and Hadoop systems",
-      "freq": 14,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_spring","2016_fall"]
-    },
-    {
-      "question": "What is a recommender system? How does it work? Discuss different examples of recommender systems.",
-      "topic": "7.7 Recommender systems",
-      "freq": 13,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_fall"]
-    },
-    {
-      "question": "Define Critical Success Factor. What might the Critical Success Factors for an Emerging IT company in Country like Nepal. Explain with their Advantages.",
-      "topic": "6.2 Critical Success Factors (CSF)",
-      "freq": 12,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2016_spring"]
-    },
-    {
-      "question": "Describe the different perspectives used in Balance Scorecard.",
-      "topic": "6.3 Advanced Balanced Scorecard — foundations and strategy map / 1.6 Balanced Scorecard — case studies",
-      "freq": 25,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_spring","2016_fall","2015_fall","2015_spring","2024_fall","2021_fall","2020_fall","2019_spring","2019_fall","2018_fall","2017_spring","2016_spring","2015_fall"]
-    },
-    {
-      "question": "Differentiate between ERP, SCM, and CRM software. How do these systems contribute to enterprise success?",
-      "topic": "3.2 Enterprise Software — ERP, SCM, CRM",
-      "freq": 13,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_spring"]
-    },
-    {
-      "question": "Define Anomaly Detection. Differentiate between OLAP and OLTP.",
-      "topic": "4.6 Data mining, Data Warehousing, OLAP and OLTP",
-      "freq": 12,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2016_spring"]
-    },
-    {
-      "question": "What is multi-layer security strategy? Discuss how multi-layer security strategy can be applied to protect e-commerce systems.",
-      "topic": "2.4 Consumer layered security strategy / 2.5 Enterprise layered security strategy",
-      "freq": 10,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall"]
-    },
-    {
-      "question": "Define information system. Describe its importance with qualities of a good information System?",
-      "topic": "1.4 Qualities of information systems / 1.1 Classification and evolution of IS",
+      "question": "State and prove Cauchy's Integral Formula (including its extension for higher-order derivatives). Hence evaluate ∮_c f(z) dz around a given closed contour C.",
+      "topic": "3.2 Cauchy's Integral Formula and its Extension",
       "freq": 18,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_spring","2016_fall","2015_fall","2015_spring","2024_fall","2021_fall"]
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA",
+        "2021-FA", "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA",
+        "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA", "2014-SP"
+      ]
     },
     {
-      "question": "Discuss the concept of change management and explain how it helps businesses effectively navigate technological, organizational, or strategic changes while minimizing disruptions to daily operations.",
-      "topic": "6.1 Change Management",
-      "freq": 10,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall"]
+      "question": "Use Z-transform to solve the difference equation y_{n+2} + ay_{n+1} + by_n = f(n) with given initial conditions y₀ and y₁.",
+      "topic": "7.4 Solution of Difference Equations using Z-Transform",
+      "freq": 20,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA",
+        "2021-FA", "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA",
+        "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA", "2015-SP",
+        "2014-FA", "2014-SP"
+      ]
     },
     {
-      "question": "Explain the role of IS and IT in Enterprise Management.",
-      "topic": "3.4 Role of IS and IT in Enterprise Management",
-      "freq": 11,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring"]
+      "question": "Derive the one-dimensional wave equation. Find u(x, t) with boundary conditions u(0,t) = 0 = u(L,t) and given initial deflection f(x) / initial velocity g(x).",
+      "topic": "6.3 One-Dimensional Wave Equation — derivation and solution",
+      "freq": 20,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA",
+        "2021-FA", "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA",
+        "2018-SP", "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA",
+        "2014-FA", "2014-SP"
+      ]
     },
     {
-      "question": "Define Strategic Information System. Differentiate Tactical Planning Versus Strategic Planning.",
-      "topic": "5.1 Strategic Information System",
-      "freq": 11,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring"]
+      "question": "State and prove Cauchy's Residue Theorem. Evaluate ∮_c f(z) dz using the residue theorem for a given function and contour.",
+      "topic": "3.3 Cauchy's Residue Theorem — statement, proof and applications",
+      "freq": 19,
+      "papers": [
+        "2025-SP", "2024-SP", "2023-FA", "2023-SP", "2022-FA", "2021-FA",
+        "2021-SP", "2020-FA", "2019-FA", "2018-FA", "2018-SP", "2017-FA",
+        "2017-SP", "2016-FA", "2016-SP", "2015-FA", "2015-SP", "2014-FA",
+        "2014-SP"
+      ]
     },
     {
-      "question": "What is collaborative filtering? Explain its advantages and disadvantages.",
-      "topic": "7.6 Collaborative filtering",
-      "freq": 12,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2016_fall"]
+      "question": "Define Fourier integral. Choosing a suitable function, show that ∫₀^∞ [expression in ω] dω equals a given piecewise function of x.",
+      "topic": "5.2 Fourier Integral Representation",
+      "freq": 19,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA",
+        "2021-FA", "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-SP",
+        "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA", "2015-SP",
+        "2014-SP"
+      ]
     },
     {
-      "question": "Define DSS and GDSS. Justify 'AI and Expert System is necessity for business in modern business'.",
-      "topic": "4.2 Group decision support systems (GDSS) / 4.5 AI, Neural Networks, Virtual reality, Intelligent Agents",
-      "freq": 10,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall"]
+      "question": "Find the Fourier sine/cosine transform of f(x) = e^{-x} (or e^{-mx}), x > 0. Hence prove that ∫₀^∞ x sin(mx) / (1+x²) dx = (π/2)e^{-m} or ∫₀^∞ cos(kx) / (1+x²) dx = (π/2)e^{-k}.",
+      "topic": "5.4 Fourier Sine and Cosine Transforms",
+      "freq": 19,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2022-FA", "2021-FA",
+        "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA", "2018-SP",
+        "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA", "2015-SP",
+        "2014-FA"
+      ]
     },
     {
-      "question": "Explain about web usage mining technique.",
-      "topic": "7.5 Web usage mining",
-      "freq": 7,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall"]
+      "question": "Find the temperature distribution u(x, t) in a laterally insulated bar of length L with ends at zero temperature and initial temperature f(x). Also derive the one-dimensional heat equation.",
+      "topic": "6.4 One-Dimensional Heat Equation — derivation and temperature distribution",
+      "freq": 19,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA",
+        "2021-FA", "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA",
+        "2018-SP", "2017-FA", "2017-SP", "2016-FA", "2016-SP", "2015-FA",
+        "2014-FA"
+      ]
     },
     {
-      "question": "Define Change Management. Explain Next Generation Balanced Scorecard in detail.",
-      "topic": "6.3 Advanced Balanced Scorecard — foundations and strategy map / 6.1 Change Management",
+      "question": "Find the image of the triangular region bounded by x = 0, y = 0, and x + y = 1 under the transformation w = ze^{iπ/4} (or similar rotation/conformal map). Sketch the mapped region.",
+      "topic": "2.3 Standard Transformations — image of regions",
+      "freq": 14,
+      "papers": [
+        "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA", "2021-FA",
+        "2021-SP", "2019-FA", "2019-SP", "2018-FA", "2018-SP", "2017-FA",
+        "2017-SP", "2015-SP"
+      ]
+    },
+    {
+      "question": "Express the Laplacian ∇²u = ∂²u/∂x² + ∂²u/∂y² in polar coordinates (r, θ). Also derive it from Cartesian form.",
+      "topic": "6.5 Two-Dimensional Laplace Equation in polar coordinates",
+      "freq": 15,
+      "papers": [
+        "2025-SP", "2024-FA", "2023-FA", "2023-SP", "2022-FA", "2021-FA",
+        "2021-SP", "2020-FA", "2019-FA", "2019-SP", "2018-FA", "2017-SP",
+        "2015-SP", "2014-FA", "2014-SP"
+      ]
+    },
+    {
+      "question": "State and prove the First (or Second) Shifting Theorem of Z-transform. Using it, find Z{aⁿ cos bt}, Z{aⁿ sin bt}, or Z{e^{-at} sin bt}.",
+      "topic": "7.2 Shifting Theorems — first and second shifting theorems",
+      "freq": 14,
+      "papers": [
+        "2024-SP", "2023-FA", "2023-SP", "2022-FA", "2021-FA", "2021-SP",
+        "2019-FA", "2018-FA", "2017-FA", "2017-SP", "2016-FA", "2016-SP",
+        "2014-FA", "2014-SP"
+      ]
+    },
+    {
+      "question": "By separating the variables, solve the partial differential equation y²u_x − x²u_y = 0 (or u_{xx} − u_{xy} = 0, or u_{xx} + u_{yy} = 0).",
+      "topic": "6.2 Separation of Variables Method",
+      "freq": 14,
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2022-FA", "2021-SP", "2020-FA",
+        "2019-FA", "2019-SP", "2018-FA", "2018-SP", "2017-SP", "2015-SP",
+        "2014-FA", "2014-SP"
+      ]
+    },
+    {
+      "question": "Find the tangent vector and unit tangent vector to the space curve r⃗(t) = f(t)î + g(t)ĵ + h(t)k̂ at a given point.",
+      "topic": "8.1 Curves in Space — tangent vector, unit tangent vector",
+      "freq": 14,
+      "papers": [
+        "2024-FA", "2024-SP", "2023-FA", "2023-SP", "2022-FA", "2021-FA",
+        "2021-SP", "2019-FA", "2019-SP", "2018-SP", "2017-FA", "2017-SP",
+        "2016-SP", "2014-FA"
+      ]
+    },
+    {
+      "question": "Find the Laurent series expansion of f(z) in the given annular regions (e.g., |z| < a, a < |z| < b, |z| > b).",
+      "topic": "4.2 Laurent's Series Expansion in Annular Regions",
       "freq": 13,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2017_fall","2016_fall"]
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2023-FA", "2022-FA", "2021-SP",
+        "2020-FA", "2018-FA", "2018-SP", "2016-SP", "2016-FA", "2015-FA",
+        "2014-SP"
+      ]
     },
     {
-      "question": "What is Link Analysis in Web Search. How does a Search Engine Work? Discuss its architecture.",
-      "topic": "7.2 Link Analysis / 7.3 Searching the web — search engines",
-      "freq": 8,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall"]
-    },
-    {
-      "question": "Explain the concept of Enterprise engineering. How can enterprise integration provide the means to share data between different applications?",
-      "topic": "3.5 Enterprise engineering, Electronic organism, Loose vs Full integration",
-      "freq": 8,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall"]
-    },
-    {
-      "question": "What is Data Warehouse? Why do you require data warehouse along with operational databases? How is it related with data mining?",
-      "topic": "4.6 Data mining, Data Warehousing, OLAP and OLTP",
+      "question": "Find the inverse Z-transform of F(z) using partial fraction expansion or power series method.",
+      "topic": "7.3 Inverse Z-Transform — partial fractions and long division",
       "freq": 12,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall","2020_fall","2019_fall","2019_spring","2018_fall","2017_spring","2016_spring"]
+      "papers": [
+        "2025-SP", "2024-FA", "2024-SP", "2022-FA", "2019-FA", "2019-SP",
+        "2017-FA", "2016-FA", "2016-SP", "2015-FA", "2015-SP", "2014-SP"
+      ]
     },
     {
-      "question": "What are the key factors that have to be considered while developing web-based information system? Explain them briefly.",
-      "topic": "7.4 Navigating the web — navigation design / 7.1 The structure of the web",
-      "freq": 6,
-      "papers": ["2025_spring","2024_fall","2023_spring","2022_fall","2021_spring","2021_fall"]
+      "question": "Define a bilinear transformation. Find the bilinear transformation that maps the given points z₁, z₂, z₃ to w₁, w₂, w₃. Also find the image of the unit circle |z| = 1.",
+      "topic": "2.2 Bilinear (Möbius) Transformation",
+      "freq": 10,
+      "papers": [
+        "2023-SP", "2021-FA", "2019-FA", "2018-SP", "2017-FA", "2016-SP",
+        "2015-SP", "2014-FA", "2025-SP", "2022-FA"
+      ]
+    },
+    {
+      "question": "Define singularity of a complex function. Find the poles, zeros, and residues of a given function f(z).",
+      "topic": "4.3 Zeros, Singularities and Poles — types and classification",
+      "freq": 8,
+      "papers": [
+        "2021-SP", "2019-SP", "2018-SP", "2016-FA", "2015-FA", "2016-SP",
+        "2014-FA", "2014-SP"
+      ]
+    },
+    {
+      "question": "Check analyticity of f(z) = z² (or f(z) = z³) using the Cauchy-Riemann equations.",
+      "topic": "1.2 Cauchy-Riemann Equations — analyticity check",
+      "freq": 7,
+      "papers": [
+        "2024-FA", "2024-SP", "2022-FA", "2021-SP", "2019-SP", "2018-SP",
+        "2017-SP"
+      ]
+    },
+    {
+      "question": "Find the Fourier transform of f(x) = e^{-x²/2}.",
+      "topic": "5.3 Fourier Transform — Gaussian function",
+      "freq": 5,
+      "papers": [
+        "2024-SP", "2023-SP", "2021-FA", "2019-FA", "2014-SP"
+      ]
+    },
+    {
+      "question": "Find the solution of the one-dimensional wave equation by D'Alembert's method.",
+      "topic": "6.6 D'Alembert's Solution of the Wave Equation",
+      "freq": 5,
+      "papers": [
+        "2022-FA", "2021-SP", "2017-SP", "2016-SP", "2014-SP"
+      ]
+    },
+    {
+      "question": "Find the Fourier cosine transform of f(x) = e^{-x} for x > 0. Hence by Parseval's identity, show that ∫₀^∞ dx / (1+x²)² = π/4.",
+      "topic": "5.5 Parseval's Identity and Applications",
+      "freq": 5,
+      "papers": [
+        "2024-FA", "2024-SP", "2021-SP", "2019-SP", "2018-FA"
+      ]
+    },
+    {
+      "question": "Write the equation of an ellipsoid (or paraboloid, hyperboloid) and sketch it showing the centre and axes of symmetry.",
+      "topic": "8.2 Quadric Surfaces — equations and sketches",
+      "freq": 5,
+      "papers": [
+        "2025-SP", "2024-SP", "2023-FA", "2015-FA", "2015-SP"
+      ]
+    },
+    {
+      "question": "What is the Helmholtz equation? Solve F_{xx} + F_{yy} + k²F = 0 subject to boundary conditions F(0,y) = 0 = F(a,y) = F(x,0) = F(x,b).",
+      "topic": "6.7 Two-Dimensional Problems and Helmholtz Equation",
+      "freq": 4,
+      "papers": [
+        "2020-FA", "2018-SP", "2016-FA", "2016-SP"
+      ]
     }
   ]
 }
