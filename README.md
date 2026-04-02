@@ -62,29 +62,38 @@ npx http-server -p 8000
 PU-QuestionPaper_Analyzer/
 │
 ├── App.bat                     ← Windows launcher (auto-starts server)
+├── StartServer.bat             ← Simple server starter
 ├── LICENSE                     ← License file
 ├── README.md                   ← Documentation
 │
 └── src/
-    ├── index.html                  ← The app (do not rename)
-    ├── app-info.json               ← App settings, nested structure
-    ├── pu-logo.png                 ← Optional logo
+    ├── index.html              ← The app (do not rename)
+    ├── app-info.json           ← App settings with program list
+    ├── pu-logo.png             ← Optional logo
+    ├── test.html               ← Server test page
     │
-    └── BE_COMPUTER/
+    ├── Content/                ← Program configuration files
+    │   ├── be_computer.json    ← BE Computer program data
+    │   ├── software.json       ← Software Engineering program data
+    │   └── default.json        ← Welcome page content
+    │
+    └── BE_COMPUTER/            ← Subject data folders
         ├── Sem_II/
-        │   └── Thermal/
-        │       ├── old_question_papers.json
-        │       ├── repeated_questions.json
-        │       ├── syllabus.json
-        │       └── img/
-        │           ├── 2023-S-6b.png
-        │           └── ...
+        │   ├── Thermal/
+        │   │   ├── old_question_papers.json
+        │   │   ├── repeated_questions.json
+        │   │   ├── syllabus.json
+        │   │   └── img/
+        │   │       └── 2023-S-6b.png
+        │   └── Eng_Mathematics_II/
         ├── Sem_IV/
-        │   └── Math_IV/
+        │   └── Eng_Mathematics_IV/
+        ├── Sem_VII/
+        │   └── AI/
         └── Sem_VIII/
             ├── IS/
             ├── DSAP/
-            ├── O&M/
+            ├── OM/
             └── SPIT/
 ```
 
@@ -109,6 +118,8 @@ git clone git@github.com:RmnRj/PU-QuestionPaper_Analyzer.git
 Create folders following this pattern:
 ```
 src/
+├── Content/
+│   └── be_computer.json        ← Program configuration
 └── BE_COMPUTER/
     └── Sem_VIII/
         └── YourSubject/
@@ -116,27 +127,41 @@ src/
             ├── repeated_questions.json
             ├── syllabus.json
             └── img/
-                ├── 2024-F-1a.png
-                └── ...
+                └── 2024-F-1a.png
 ```
 
 **Folder naming rules:**
 - Use meaningful names (e.g., `Thermal`, `IS`, `DSAP`)
-- Match the path in `app-info.json`
 - Create an `img/` subfolder for images
+- Semester folders use format: `Sem_II`, `Sem_IV`, `Sem_VIII`
 
-### Step 3 — Register in app-info.json
+### Step 3 — Register in Program Configuration
 
-Add your subject to the nested structure under the appropriate Program → Semester:
+**Step 3a:** First, register in `app-info.json` (if adding a new program):
 
 ```json
-"content": {
-  "BE Computer": {
+"content": [
+  {
+    "program": "BE_Computer",
+    "file_url": "Content/be_computer.json",
+    "default": true
+  }
+]
+```
+
+**Step 3b:** Then, add your subject to the program's JSON file (e.g., `Content/be_computer.json`):
+
+```json
+{
+  "program": "BE COMPUTER",
+  "semesters": [
+    {"semester": "Sem VIII", "address": "BE_COMPUTER/Sem_VIII"}
+  ],
+  "content": {
     "Sem VIII": [
       {
         "subject": "Your Subject",
-        "folder": "BE_COMPUTER/Sem_VIII/YourSubject",
-        "default": false
+        "folder": "YourSubject"
       }
     ]
   }
@@ -145,8 +170,9 @@ Add your subject to the nested structure under the appropriate Program → Semes
 
 **Important:**
 - Keep subjects sorted alphabetically within each semester
-- Semesters are automatically sorted in ascending order (Sem I, Sem II, ... Sem VIII)
-- The app uses cascading filters: Program → Semester → Subject
+- The `address` field in semesters points to the folder path
+- The `folder` field in content is relative to the semester address
+- Full path becomes: `{address}/{folder}` = `BE_COMPUTER/Sem_VIII/YourSubject`
 
 ### Step 4 — Create Required JSON Files
 
@@ -184,56 +210,63 @@ You need **Python** or **Node.js** installed to run a local server.
 
 ```json
 {
-    "app_name": "Question Analyzer",
-    "app_ic": "pu-logo.png",
-    "university": "PU",
-    "program": "BE_Computer",
-    "accent_color": "#2B5EA7",
-
-    "tab_labels": {
-        "questions": "Questions",
-        "papers": "Papers",
-        "repeated": "Repeated",
-        "syllabus": "Syllabus"
+  "app_name": "Question Analyzer",
+  "app_ic": "pu-logo.png",
+  "university": "PU",
+  "program": "BE_Computer",
+  "accent_color": "#2B5EA7",
+  "tab_labels": {
+    "questions": "Questions",
+    "papers": "Papers",
+    "repeated": "Repeated",
+    "syllabus": "Syllabus"
+  },
+  "overview": [
+    {"label": "Papers", "value": "auto:papers"},
+    {"label": "Questions", "value": "auto:questions"},
+    {"label": "Chapters", "value": "auto:chapters"},
+    {"label": "Syllabus Topics", "value": "auto:topics"},
+    {"label": "Peak Repeats", "value": "auto:peak"},
+    {"label": "Year Span", "value": "auto:yearspan"}
+  ],
+  "content": [
+    {
+      "program": "BE_Computer",
+      "file_url": "Content/be_computer.json",
+      "default": true
     },
-
-    "overview": [
-        { "label": "Papers",          "value": "auto:papers"    },
-        { "label": "Questions",       "value": "auto:questions" },
-        { "label": "Chapters",        "value": "auto:chapters"  },
-        { "label": "Syllabus Topics", "value": "auto:topics"    },
-        { "label": "Peak Repeats",    "value": "auto:peak"      },
-        { "label": "Year Span",       "value": "auto:yearspan"  }
-    ],
-
-    "content": {
-        "BE Computer": {
-            "default_content": {
-                "title": "Welcome to Question Analyzer",
-                "description": "Select a semester and subject from the dropdowns above to view question papers, repeated questions, and syllabus.",
-                "features": [
-                    "Browse past question papers by year and semester",
-                    "View frequently repeated questions with frequency analysis",
-                    "Explore syllabus with topic-wise question frequency",
-                    "Filter questions by year, semester, marks, and type"
-                ]
-            },
-            "Sem II": [
-                {
-                    "subject": "Thermal",
-                    "folder": "BE_COMPUTER/Sem_II/Thermal",
-                    "default": false
-                }
-            ],
-            "Sem VIII": [
-                {
-                    "subject": "IS",
-                    "folder": "BE_COMPUTER/Sem_VIII/IS",
-                    "default": true
-                }
-            ]
-        }
+    {
+      "program": "Software_Engineering",
+      "file_url": "Content/software.json",
+      "default": false
     }
+  ]
+}
+```
+
+### 4.1b `Content/be_computer.json` — Program Configuration
+
+```json
+{
+  "program": "BE COMPUTER",
+  "semesters": [
+    {"semester": "Sem II", "address": "BE_COMPUTER/Sem_II"},
+    {"semester": "Sem VIII", "address": "BE_COMPUTER/Sem_VIII"}
+  ],
+  "content": {
+    "Sem II": [
+      {
+        "subject": "Thermal",
+        "folder": "Thermal"
+      }
+    ],
+    "Sem VIII": [
+      {
+        "subject": "IS",
+        "folder": "IS"
+      }
+    ]
+  }
 }
 ```
 

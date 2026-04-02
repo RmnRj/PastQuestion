@@ -682,7 +682,7 @@
 
         .q-fig img {
             height: auto;
-            width: 220px;
+            width: 264px;
             max-width: 100%;
             border: 1px solid var(--border-lt);
             border-radius: var(--r);
@@ -756,7 +756,7 @@
 
         .pq-fig img {
             height: auto;
-            width: 220px;
+            width: 400px;
             max-width: 100%;
             border: 1px solid var(--border-lt);
             border-radius: var(--r);
@@ -1827,21 +1827,23 @@
                                 <div class="gs-content">
                                     <div class="gs-label">Folder structure for subjects</div>
                                     <div class="gs-code">src/
-                                        ├── BE_COMPUTER/
-                                        │ ├── Sem_VIII/
-                                        │ │ ├── IS/
-                                        │ │ │ ├── old_question_papers.json
-                                        │ │ │ ├── repeated_questions.json
-                                        │ │ │ ├── syllabus.json
-                                        │ │ │ └── img/
-                                        │ │ │ └── 2023-S-6b.png
-                                        │ │ └── DSAP/
-                                        │ └── Sem_II/
-                                        │ └── Thermal/
-                                        │ ├── old_question_papers.json
-                                        │ ├── repeated_questions.json
-                                        │ ├── syllabus.json
-                                        │ └── img/</div>
+├── Content/
+│ └── be_computer.json
+└── BE_COMPUTER/
+  ├── Sem_VIII/
+  │ ├── IS/
+  │ │ ├── old_question_papers.json
+  │ │ ├── repeated_questions.json
+  │ │ ├── syllabus.json
+  │ │ └── img/
+  │ │   └── 2023-S-6b.png
+  │ └── DSAP/
+  └── Sem_II/
+    └── Thermal/
+      ├── old_question_papers.json
+      ├── repeated_questions.json
+      ├── syllabus.json
+      └── img/</div>
                                     <div class="gs-note"><strong>Required Files:</strong> Each subject folder must
                                         contain exactly 3 files: <span class="gs-ic">old_question_papers.json</span>,
                                         <span class="gs-ic">repeated_questions.json</span>, and <span
@@ -1863,23 +1865,23 @@
                             <div class="guide-step">
                                 <div class="gs-dot">1</div>
                                 <div class="gs-content">
-                                    <div class="gs-label">Add subject to nested structure in app-info.json</div>
-                                    <div class="gs-code">"content": {
-                                        "BE Computer": {
-                                        "Sem VIII": [
-                                        {
-                                        "subject": "Your Subject",
-                                        "folder": "BE_COMPUTER/Sem_VIII/YourSubject",
-                                        "default": false
-                                        }
-                                        ]
-                                        }
-                                        }</div>
-                                    <div class="gs-note">Add your subject under the appropriate Program → Semester. The
-                                        app will automatically load <span class="gs-ic">old_question_papers.json</span>,
-                                        <span class="gs-ic">repeated_questions.json</span>, and <span
-                                            class="gs-ic">syllabus.json</span> from the folder path. Keep subjects
-                                        sorted alphabetically within each semester.</div>
+                                    <div class="gs-label">Add subject to program configuration</div>
+                                    <div class="gs-code">// In Content/be_computer.json
+{
+"program": "BE COMPUTER",
+"semesters": [
+{"semester": "Sem VIII", "address": "BE_COMPUTER/Sem_VIII"}
+],
+"content": {
+"Sem VIII": [
+{
+"subject": "Your Subject",
+"folder": "YourSubject"
+}
+]
+}
+}</div>
+                                    <div class="gs-note">Add your subject under the appropriate semester in the program's JSON file (e.g., <span class="gs-ic">Content/be_computer.json</span>). The full path becomes <span class="gs-ic">{address}/{folder}</span> = <span class="gs-ic">BE_COMPUTER/Sem_VIII/YourSubject</span>. Keep subjects sorted alphabetically.</div>
                                 </div>
                             </div>
                         </div>
@@ -1897,36 +1899,36 @@
                                 <div class="gs-content">
                                     <div class="gs-label">File 1: old_question_papers.json</div>
                                     <div class="gs-code">{
-                                        "subject": "Thermal Engineering",
-                                        "university": "Pokhara University",
-                                        "programme": "BE — Mechanical Engineering",
-                                        "level": "Bachelor",
-                                        "full_marks": 100,
-                                        "pass_marks": 45,
-                                        "papers": [
-                                        {
-                                        "id": "2024_fall",
-                                        "year": "2024",
-                                        "semester": "Fall",
-                                        "questions": [
-                                        {
-                                        "number": "1",
-                                        "sub_no": "a",
-                                        "marks": 7,
-                                        "question": "Define thermodynamics...",
-                                        "context": "Optional case study",
-                                        "fig_url": "BE_COMPUTER/Sem_II/Thermal/img/2023-S-6b.png",
-                                        "table_data": {
-                                        "headers": ["Column 1", "Column 2"],
-                                        "rows": [
-                                        {"col1": "Value 1", "col2": "Value 2"}
-                                        ]
-                                        }
-                                        }
-                                        ]
-                                        }
-                                        ]
-                                        }</div>
+"subject": "Thermal Engineering",
+"university": "Pokhara University",
+"programme": "BE — Mechanical Engineering",
+"level": "Bachelor",
+"full_marks": 100,
+"pass_marks": 45,
+"papers": [
+{
+"id": "2024_fall",
+"year": "2024",
+"semester": "Fall",
+"questions": [
+{
+"number": "1",
+"sub_no": "a",
+"marks": 7,
+"question": "Define thermodynamics...",
+"context": "Optional case study",
+"fig_url": "BE_COMPUTER/Sem_II/Thermal/img/2023-S-6b.png",
+"table_data": {
+"headers": ["Column 1", "Column 2"],
+"rows": [
+{"col1": "Value 1", "col2": "Value 2"}
+]
+}
+}
+]
+}
+]
+}</div>
                                     <div class="gs-note">The <span class="gs-ic">subject</span>, <span
                                             class="gs-ic">university</span>, and <span class="gs-ic">programme</span>
                                         fields are displayed in the Subject Information Bar.</div>
@@ -1951,12 +1953,12 @@
                                     <div class="gs-desc">Add tables using <span class="gs-ic">table_data</span> with
                                         headers and rows:</div>
                                     <div class="gs-code">"table_data": {
-                                        "headers": ["Parameter", "Value", "Unit"],
-                                        "rows": [
-                                        {"col1": "Temperature", "col2": "100", "col3": "°C"},
-                                        {"col1": "Pressure", "col2": "1.5", "col3": "bar"}
-                                        ]
-                                        }</div>
+"headers": ["Parameter", "Value", "Unit"],
+"rows": [
+{"col1": "Temperature", "col2": "100", "col3": "°C"},
+{"col1": "Pressure", "col2": "1.5", "col3": "bar"}
+]
+}</div>
                                     <div class="gs-note"><strong>Rules:</strong> Each row object keys (col1, col2,
                                         col3...) must match the number of headers. Tables are responsive with horizontal
                                         scroll on small screens.</div>
@@ -1969,10 +1971,10 @@
                                     <div class="gs-desc">For equations, use Unicode symbols or save as images:</div>
                                     <div class="gs-code">"question": "Calculate using formula: E = mc²"
 
-                                        OR
+OR
 
-                                        "question": "Solve the equation shown below:",
-                                        "fig_url": "BE_COMPUTER/Sem_VIII/Math/img/equation-1.png"</div>
+"question": "Solve the equation shown below:",
+"fig_url": "BE_COMPUTER/Sem_VIII/Math/img/equation-1.png"</div>
                                     <div class="gs-note"><strong>Tip:</strong> For complex equations, save them as PNG
                                         images using LaTeX editors or screenshot tools. Use Unicode for simple
                                         expressions: ∫, ∑, √, ², ³, α, β, π, ≤, ≥, ≠, ∞</div>
@@ -1983,15 +1985,15 @@
                                 <div class="gs-content">
                                     <div class="gs-label">File 2: repeated_questions.json</div>
                                     <div class="gs-code">{
-                                        "repeated_questions": [
-                                        {
-                                        "question": "Define management...",
-                                        "topic": "1.1 Meaning and concept",
-                                        "freq": 20,
-                                        "papers": ["2025_spring", "2024_fall"]
-                                        }
-                                        ]
-                                        }</div>
+"repeated_questions": [
+{
+"question": "Define management...",
+"topic": "1.1 Meaning and concept",
+"freq": 20,
+"papers": ["2025_spring", "2024_fall"]
+}
+]
+}</div>
                                     <div class="gs-note">Contains questions that appear frequently across multiple
                                         papers with their frequency count.</div>
                                 </div>
@@ -2001,20 +2003,20 @@
                                 <div class="gs-content">
                                     <div class="gs-label">File 3: syllabus.json</div>
                                     <div class="gs-code">{
-                                        "course_title": "Thermal Engineering",
-                                        "course_code": "ME 501",
-                                        "total_hours": 45,
-                                        "course_contents": [
-                                        {
-                                        "unit": 1,
-                                        "title": "Introduction",
-                                        "hours": 3,
-                                        "topics": [
-                                        { "topic": "1.1 Basic concepts", "frequency": 15 }
-                                        ]
-                                        }
-                                        ]
-                                        }</div>
+"course_title": "Thermal Engineering",
+"course_code": "ME 501",
+"total_hours": 45,
+"course_contents": [
+{
+"unit": 1,
+"title": "Introduction",
+"hours": 3,
+"topics": [
+{"topic": "1.1 Basic concepts", "frequency": 15}
+]
+}
+]
+}</div>
                                     <div class="gs-note">Contains syllabus with frequency count for each topic showing
                                         how many times it appeared in papers.</div>
                                 </div>
@@ -2037,19 +2039,18 @@
                                     </div>
                                     <div class="gs-desc" style="margin-top:8px"><strong>Step 3:</strong> Upload your
                                         PDF/image and paste this prompt:</div>
-                                    <div class="gs-code" style="margin-top:8px">Convert this question paper to JSON
-                                        following this exact format:
+                                    <div class="gs-code" style="margin-top:8px">Convert this question paper to JSON following this exact format:
 
-                                        [Paste the format example here]
+[Paste the format example here]
 
-                                        Rules:
-                                        - Use "id": "YYYY_semester" (e.g. "2024_fall")
-                                        - Extract all questions with number, sub_no, marks, question text
-                                        - For OR questions use "sub_no": "or"
-                                        - For images/diagrams, note them as "fig_url": "path/to/image.png"
-                                        - For tables, extract as "table_data" with headers and rows
-                                        - For equations, use Unicode symbols or note as image
-                                        - Extract full question text accurately</div>
+Rules:
+- Use "id": "YYYY_semester" (e.g. "2024_fall")
+- Extract all questions with number, sub_no, marks, question text
+- For OR questions use "sub_no": "or"
+- For images/diagrams, note them as "fig_url": "path/to/image.png"
+- For tables, extract as "table_data" with headers and rows
+- For equations, use Unicode symbols or note as image
+- Extract full question text accurately</div>
                                     <div class="gs-desc" style="margin-top:8px"><strong>Step 4:</strong> Copy the
                                         AI-generated JSON and save to your subject folder with the exact file name</div>
                                 </div>
@@ -2537,14 +2538,14 @@
         function figHtml(src, prefix = 'q') {
             if (!src) return '';
             const imgId = `${prefix}-img-${imgCounter++}`;
-            imgSizes[imgId] = 220; // Default width in pixels
+            imgSizes[imgId] = 264; // Default width: 220 * 1.2 = 264px (20% increase)
             return `<div class="${prefix}-fig">
                 <div class="${prefix}-fig-controls">
                     <button class="q-fig-btn" onclick="zoomImg('${imgId}', -1)" id="${imgId}-minus">−</button>
                     <button class="q-fig-btn" onclick="zoomImg('${imgId}', 1)" id="${imgId}-plus">+</button>
                 </div>
                 <div class="${prefix}-fig-wrapper">
-                    <img id="${imgId}" src="${src}" alt="Figure" loading="lazy" onerror="this.style.opacity='.3'" style="width:220px">
+                    <img id="${imgId}" src="${src}" alt="Figure" loading="lazy" onerror="this.style.opacity='.3'" style="width:264px">
                 </div>
             </div>`;
         }
@@ -2557,10 +2558,10 @@
 
             const screenWidth = window.innerWidth;
             const maxWidth = Math.floor(screenWidth * 0.6); // 60% of screen width
-            const minWidth = 150; // Minimum width
+            const minWidth = 180; // Minimum width: 150 * 1.2 = 180px (20% increase)
             const step = 50; // Increase/decrease by 50px
 
-            let currentWidth = imgSizes[imgId] || 220;
+            let currentWidth = imgSizes[imgId] || 264;
             currentWidth += direction * step;
 
             // Clamp between min and max
@@ -2917,7 +2918,7 @@
         // ERROR SCREEN
         // ════════════════════════════════════════════════════
         function errorHtml() {
-            return `<div style="max-width:480px;margin:24px;font-family:'Source Sans 3',system-ui,sans-serif"><div style="background:#FAEBEB;border:1px solid #F5C0C0;border-radius:6px;padding:20px 24px;margin-bottom:16px"><div style="font-weight:700;font-size:15px;color:#7A1A1A;margin-bottom:4px">⚠ Cannot load app-info.json</div><div style="font-size:13.5px;color:#A03030;line-height:1.5">Browsers block local file reading for security. This app must be served over HTTP.</div></div><div style="background:#fff;border:1px solid #DDD9CE;border-radius:6px;padding:20px 24px"><div style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:#9A9189;margin-bottom:14px">How to run</div><div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</span><div><div style="font-size:13.5px;color:#1A1816;margin-bottom:5px">Open a terminal in the <strong>src</strong> folder</div></div></div><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</span><div style="width:100%"><div style="font-size:13.5px;color:#1A1816;margin-bottom:6px">Run:</div><div style="background:#1A1816;border-radius:4px;padding:8px 12px"><code style="font-family:monospace;font-size:13px;color:#E8E4DC">python -m http.server 8000</code></div></div></div><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</span><div style="width:100%"><div style="font-size:13.5px;color:#1A1816;margin-bottom:8px">Then open:</div><button onclick="window.location.href='http://localhost:8000/index.html'" style="width:100%;padding:10px;background:#2B5EA7;color:#fff;border:none;border-radius:5px;font-family:'Source Sans 3',system-ui,sans-serif;font-size:14px;font-weight:600;cursor:pointer">Open localhost:8000/index.html →</button></div></div></div></div></div>`;
+            return `<div style="max-width:480px;margin:24px;font-family:'Source Sans 3',system-ui,sans-serif"><div style="background:#FAEBEB;border:1px solid #F5C0C0;border-radius:6px;padding:20px 24px;margin-bottom:16px"><div style="font-weight:700;font-size:15px;color:#7A1A1A;margin-bottom:4px">⚠ Cannot load app-info.json</div><div style="font-size:13.5px;color:#A03030;line-height:1.5">Browsers block local file reading for security. This app must be served over HTTP.</div></div><div style="background:#fff;border:1px solid #DDD9CE;border-radius:6px;padding:20px 24px"><div style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:#9A9189;margin-bottom:14px">How to run</div><div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</span><div><div style="font-size:13.5px;color:#1A1816;margin-bottom:5px">Open a terminal in the <strong>src</strong> folder</div></div></div><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</span><div style="width:100%"><div style="font-size:13.5px;color:#1A1816;margin-bottom:6px">Run:</div><div style="background:#1A1816;border-radius:4px;padding:8px 12px"><code style="font-family:monospace;font-size:13px;color:#E8E4DC">python -m http.server 8000</code></div></div></div><div style="display:flex;gap:12px;align-items:flex-start"><span style="background:#EBF0FA;color:#2B5EA7;font-weight:700;font-size:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</span><div style="width:100%"><div style="font-size:13.5px;color:#1A1816;margin-bottom:8px">Then open:</div><button onclick="window.location.href='http://localhost:8000/src/index.html'" style="width:100%;padding:10px;background:#2B5EA7;color:#fff;border:none;border-radius:5px;font-family:'Source Sans 3',system-ui,sans-serif;font-size:14px;font-weight:600;cursor:pointer">Open localhost:8000/src/index.html →</button></div></div></div></div></div>`;
         }
 
         // ════════════════════════════════════════════════════
