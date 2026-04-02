@@ -502,7 +502,7 @@
           "sub_no": "a",
           "marks": 7,
           "question": "Consider a graph of cities as shown in below figure:\ni. Represent state space of this graph using prolog.\nii. Write a simple search algorithm in prolog to reach to the goal state from initial state.",
-          "fig_url": "BE_COMPUTER/Sem_VI/AI/img/2019-FA-2b.png",
+          "fig_url": "BE_COMPUTER/Sem_VII/AI/img/2019-FA-2b.png",
           "fig_description": "Directed graph of cities with 8 nodes. Initial State is node A (top-left). Goal State is node H (bottom-right). Edges: A→B, A→C (or via other path), B→C, B→F, C connects to top, D←E, E→F, E→G, F→H, G→H."
         },
         {
