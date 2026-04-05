@@ -2032,27 +2032,74 @@ OR
                                     <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
                                         <button onclick="window.open('https://claude.ai/','_blank')"
                                             style="padding:8px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;transition:background .2s">Claude
-                                            Sonnet 4.6 (Extended Thinking) →</button>
+                                            Sonnet 4.6 →</button>
                                         <button onclick="window.open('https://grok.com/','_blank')"
                                             style="padding:8px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;transition:background .2s">Grok
-                                            AI (Expert Mode) →</button>
+                                            AI →</button>
                                     </div>
                                     <div class="gs-desc" style="margin-top:8px"><strong>Step 3:</strong> Upload your
-                                        PDF/image and paste this prompt:</div>
-                                    <div class="gs-code" style="margin-top:8px">Convert this question paper to JSON following this exact format:
-
-[Paste the format example here]
-
-Rules:
-- Use "id": "YYYY_semester" (e.g. "2024_fall")
-- Extract all questions with number, sub_no, marks, question text
-- For OR questions use "sub_no": "or"
-- For images/diagrams, note them as "fig_url": "path/to/image.png"
-- For tables, extract as "table_data" with headers and rows
-- For equations, use Unicode symbols or note as image
-- Extract full question text accurately</div>
+                                        PDF/image and paste the prompt from README</div>
                                     <div class="gs-desc" style="margin-top:8px"><strong>Step 4:</strong> Copy the
-                                        AI-generated JSON and save to your subject folder with the exact file name</div>
+                                        AI-generated JSON and save to your subject folder</div>
+                                </div>
+                            </div>
+                            <div class="guide-step">
+                                <div class="gs-dot">8</div>
+                                <div class="gs-content">
+                                    <div class="gs-label">Complete Example: old_question_papers.json</div>
+                                    <div class="gs-desc">Here's a complete example showing all features in one file:</div>
+                                    <div class="gs-code">{
+"subject": "Information Systems",
+"university": "Pokhara University",
+"programme": "BE — Computer Engineering",
+"level": "Bachelor",
+"full_marks": 100,
+"pass_marks": 45,
+"papers": [
+{
+"id": "2024_fall",
+"year": "2024",
+"semester": "Fall",
+"questions": [
+{
+"number": "1",
+"sub_no": "a",
+"marks": 5,
+"question": "Define information systems and explain its components."
+},
+{
+"number": "3",
+"sub_no": "a",
+"marks": 5,
+"question": "Analyze the circuit diagram and calculate total resistance.",
+"fig_url": "BE_COMPUTER/Sem_VIII/IS/img/2024-F-3a.png"
+},
+{
+"number": "5",
+"sub_no": "b",
+"marks": 8,
+"question": "Calculate efficiency for each process.",
+"context": "A manufacturing company operates three processes with the following data:",
+"table_data": {
+"headers": ["Process", "Input (kW)", "Output (kW)"],
+"rows": [
+{"col1": "Process A", "col2": "100", "col3": "85"},
+{"col1": "Process B", "col2": "150", "col3": "120"},
+{"col1": "Process C", "col2": "200", "col3": "180"}
+]
+}
+},
+{
+"number": "7",
+"sub_no": "a",
+"marks": 10,
+"question": "Derive the formula E = mc² and explain its significance in physics."
+}
+]
+}
+]
+}</div>
+                                    <div class="gs-note"><strong>Tip:</strong> This example shows a complete paper with Q1 (simple text), Q3 (with figure), Q5 (with table and context), and Q7 (with Unicode equation). Use figures for diagrams/circuits, tables for data, context for case studies, and Unicode symbols (², ³, ∫, √, π) for simple equations.</div>
                                 </div>
                             </div>
                         </div>
