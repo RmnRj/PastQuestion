@@ -1,0 +1,188 @@
+{
+  "course": "Logic Circuits",
+  "course_code": "ELX 212.3",
+  "credit": "3-1-3",
+  "note": "Frequency based on analysis of 16 Pokhara University BE Logic Circuits past exam papers (2010–2025).",
+  "repeated_questions": [
+    {
+      "question": "Define analog and digital systems. Why are digital systems preferred over analog systems?",
+      "topic": "1.3 Digital and analog systems",
+      "freq": 15,
+      "papers": ["2010-F","2010-S","2011-F","2012-F","2015-S","2016-F","2016-S","2017-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F","2024-S"]
+    },
+    {
+      "question": "Simplify a Boolean function using K-map (with don't care conditions) in SOP/POS form and implement using NAND/NOR gates.",
+      "topic": "4.2 Karnaugh maps — SOP and POS minimization / 4.3 Don't care conditions / 4.4 NAND-NAND and NOR-NOR implementation",
+      "freq": 16,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2012-F","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Perform number system conversions: binary, octal, hexadecimal, BCD, Gray code, Excess-3, 2421, 84-2-1.",
+      "topic": "2.1 Binary to decimal and decimal to binary conversions / 2.2 Octal and hexadecimal / 2.8 BCD codes",
+      "freq": 16,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2012-F","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Perform subtraction using r's complement (2's complement / 10's complement / 1's complement / 9's complement).",
+      "topic": "2.4 1's complement and 9's complement (r-1's complement) / 2.5 2's complement (r's complement) and subtraction",
+      "freq": 14,
+      "papers": ["2010-F","2010-S","2011-F","2012-F","2015-S","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2024-F","2025-S"]
+    },
+    {
+      "question": "Prove that Excess-3 code (or 84-2-1 code) is a self-complementing code with justification.",
+      "topic": "2.9 Self-complementing codes (Excess-3, 84-2-1)",
+      "freq": 12,
+      "papers": ["2010-F","2010-S","2011-F","2015-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F"]
+    },
+    {
+      "question": "State and prove De Morgan's theorem. Verify using Venn diagram or truth table.",
+      "topic": "3.3 De Morgan's theorem — proof and application",
+      "freq": 11,
+      "papers": ["2010-S","2011-S","2015-S","2016-S","2017-F","2019-F","2020-F","2021-F","2022-F","2023-F","2025-S"]
+    },
+    {
+      "question": "Why are NAND and NOR gates called universal gates? Construct all basic gates (AND, OR, NOT, XOR, XNOR) using only NAND or NOR gates.",
+      "topic": "3.5 Universality of NAND and NOR gates",
+      "freq": 14,
+      "papers": ["2010-F","2011-F","2011-S","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Design a full adder circuit and show how two half adders can be combined to form a full adder. Implement using MUX or decoder.",
+      "topic": "5.2 Half adder and full adder — design and implementation",
+      "freq": 13,
+      "papers": ["2010-F","2010-S","2011-F","2015-S","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2024-F","2025-S"]
+    },
+    {
+      "question": "Design an adder/subtractor circuit that performs addition (S=0) and 2's complement subtraction (S=1) with a single selection variable.",
+      "topic": "5.3 Half subtractor and full subtractor; adder/subtractor circuit",
+      "freq": 11,
+      "papers": ["2010-S","2011-F","2011-S","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F"]
+    },
+    {
+      "question": "Design a code converter circuit (Gray to binary, BCD to binary, Excess-3 to BCD, 2421 to BCD, or 2421 to 84-2-1).",
+      "topic": "5.4 Code converters (BCD, Gray, Excess-3, 2421, 84-2-1)",
+      "freq": 12,
+      "papers": ["2010-S","2011-F","2011-S","2015-S","2016-F","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2024-S"]
+    },
+    {
+      "question": "Design a parity generator (3-bit) and parity checker (4-bit) circuit for even or odd parity.",
+      "topic": "5.6 Parity generator and checker circuits / 2.10 Parity method for error detection",
+      "freq": 11,
+      "papers": ["2011-S","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F","2025-S"]
+    },
+    {
+      "question": "Design a magnitude comparator circuit to compare two 3-bit or 4-bit numbers (A>B, A<B, A=B).",
+      "topic": "6.2 Magnitude comparator — 3-bit and 4-bit design",
+      "freq": 11,
+      "papers": ["2010-S","2011-F","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2024-S"]
+    },
+    {
+      "question": "Implement a Boolean function using a Multiplexer (4:1 or 8:1 MUX).",
+      "topic": "6.4 Multiplexer (MUX) — 4:1, 8:1; function implementation using MUX",
+      "freq": 15,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Implement Boolean functions using a Decoder and OR/AND gates. Design or explain a 3:8 or 4:16 decoder.",
+      "topic": "6.3 Decoder and encoder — design and function implementation",
+      "freq": 12,
+      "papers": ["2011-F","2011-S","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F","2025-S"]
+    },
+    {
+      "question": "Implement Boolean functions using a PLA (Programmable Logic Array) with program table.",
+      "topic": "6.7 Programmable Logic Array (PLA) — program table and implementation",
+      "freq": 10,
+      "papers": ["2011-S","2014-F","2016-F","2016-S","2018-F","2019-F","2020-F","2021-F","2022-F","2024-F"]
+    },
+    {
+      "question": "Explain the operation of JK flip-flop with its logic diagram, truth table, characteristic equation and excitation table.",
+      "topic": "7.3 JK flip-flop — logic diagram, characteristic table, characteristic equation",
+      "freq": 16,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2012-F","2015-S","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-F","2024-S"]
+    },
+    {
+      "question": "Explain the operation of SR flip-flop with its logic diagram, truth table and excitation table. Why is JK flip-flop preferred over SR flip-flop?",
+      "topic": "7.2 SR flip-flop — logic diagram, truth table, excitation table",
+      "freq": 11,
+      "papers": ["2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-S","2025-S","2012-F"]
+    },
+    {
+      "question": "Explain the operation of D flip-flop with its truth table, logic diagram and characteristic equation.",
+      "topic": "7.4 D flip-flop — truth table, logic diagram, characteristic equation",
+      "freq": 9,
+      "papers": ["2011-S","2014-F","2016-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F"]
+    },
+    {
+      "question": "Design a sequential circuit from a given state diagram using JK, SR, D, or T flip-flops (state table, excitation table, K-map, logic diagram).",
+      "topic": "7.9 Sequential circuit design from state diagram (JK, SR, D, T flip-flops)",
+      "freq": 14,
+      "papers": ["2010-F","2011-F","2012-F","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-S"]
+    },
+    {
+      "question": "Differentiate between synchronous and asynchronous counters. Design a synchronous 4-bit binary up/down counter using JK or T flip-flops.",
+      "topic": "8.4 Synchronous counter design (up, down, up/down) using JK and T flip-flops / 7.10 Synchronous and asynchronous logic",
+      "freq": 15,
+      "papers": ["2010-S","2011-F","2011-S","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Design a Modulo-N (MOD-N) counter (e.g., MOD-5, MOD-8, MOD-11, BCD) using JK or T flip-flop.",
+      "topic": "8.6 Modulo-N counter design",
+      "freq": 10,
+      "papers": ["2013-F","2015-S","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F"]
+    },
+    {
+      "question": "What is a shift register? Explain the operation of Serial-In Serial-Out (SISO) shift register with circuit diagram and timing diagram.",
+      "topic": "8.2 Shift registers — SISO, SIPO, PISO, PIPO with timing diagrams",
+      "freq": 15,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Explain Johnson counter (and/or Ring counter) with its working and timing diagram.",
+      "topic": "8.5 Johnson counter and Ring counter",
+      "freq": 9,
+      "papers": ["2016-S","2018-F","2019-F","2020-F","2021-F","2022-F","2023-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Design an ALU that performs 8 arithmetic operations and 4 logical operations. Draw the logic diagram of a typical stage.",
+      "topic": "9.3 Design of Arithmetic Logic Unit (ALU) — 8 arithmetic and 4 logical operations",
+      "freq": 15,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2015-S","2016-F","2016-S","2017-F","2018-F","2019-F","2020-F","2021-F","2022-F","2024-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Design a 4-bit arithmetic circuit that performs eight different arithmetic operations with a function table.",
+      "topic": "9.2 Adder/subtractor unit / 9.3 Design of Arithmetic Logic Unit (ALU)",
+      "freq": 12,
+      "papers": ["2010-F","2010-S","2011-F","2011-S","2015-S","2016-F","2016-S","2018-F","2019-F","2020-F","2021-F","2022-F"]
+    },
+    {
+      "question": "Explain and illustrate the status register, flags (carry, zero, sign, overflow) and how their values change.",
+      "topic": "9.4 Status register and flags",
+      "freq": 10,
+      "papers": ["2011-S","2012-F","2014-F","2016-F","2018-F","2019-F","2020-F","2021-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Explain R/W (Read/Write) operation in RAM with its block diagram and memory decoding.",
+      "topic": "8.7 Random Access Memory (RAM) — R/W operation, memory decoding",
+      "freq": 9,
+      "papers": ["2013-F","2016-F","2018-F","2019-F","2020-F","2021-F","2022-F","2024-S","2025-S"]
+    },
+    {
+      "question": "Explain output hazard and races in combinational and sequential logic circuits.",
+      "topic": "8.8 Output hazards and races",
+      "freq": 8,
+      "papers": ["2010-F","2011-F","2015-S","2017-F","2018-F","2019-F","2020-F","2021-F"]
+    },
+    {
+      "question": "What is tri-state logic? Explain its significance and applications.",
+      "topic": "3.6 Tri-state logic",
+      "freq": 7,
+      "papers": ["2011-F","2015-S","2016-S","2018-F","2019-F","2020-F","2021-F"]
+    },
+    {
+      "question": "What is state reduction? Explain state reduction and binary state assignment with a suitable example.",
+      "topic": "7.8 State reduction and state assignment",
+      "freq": 8,
+      "papers": ["2010-S","2014-F","2016-F","2018-F","2019-F","2020-F","2021-F","2024-F"]
+    }
+  ]
+}

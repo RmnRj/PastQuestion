@@ -1,0 +1,165 @@
+{
+  "course_title": "Logic Circuits",
+  "course_code": "ELX 212.3",
+  "credit": "3-1-3",
+  "total_hours": 45,
+  "university": "Pokhara University",
+  "program": "BE",
+  "evaluation": {
+    "sessional": { "theory": 30, "practical": 20, "total": 50 },
+    "final": { "theory": 50, "practical": 0, "total": 50 },
+    "total": { "theory": 80, "practical": 20, "total": 100 }
+  },
+  "course_objectives": [
+    "To provide basics of logic systems.",
+    "To design, construct and test logic circuits.",
+    "To design a basic digital computer."
+  ],
+  "course_contents": [
+    {
+      "unit": 1,
+      "title": "Introduction",
+      "hours": 3,
+      "topics": [
+        { "topic": "1.1 Numerical representation", "frequency": 5 },
+        { "topic": "1.2 Digital number system", "frequency": 6 },
+        { "topic": "1.3 Digital and analog systems", "frequency": 15 },
+        { "topic": "1.4 Representing binary quantities", "frequency": 4 }
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "Number System and Codes",
+      "hours": 6,
+      "topics": [
+        { "topic": "2.1 Binary to decimal and decimal to binary conversions", "frequency": 15 },
+        { "topic": "2.2 Octal and hexadecimal number systems and conversions", "frequency": 15 },
+        { "topic": "2.3 Binary arithmetic", "frequency": 10 },
+        { "topic": "2.4 1's complement and 9's complement (r-1's complement)", "frequency": 13 },
+        { "topic": "2.5 2's complement (r's complement) and subtraction", "frequency": 14 },
+        { "topic": "2.6 Gray code", "frequency": 12 },
+        { "topic": "2.7 Instruction codes and alphanumeric characters", "frequency": 4 },
+        { "topic": "2.8 Binary Coded Decimal (BCD) — 8421, 2421, Excess-3, 84-2-1 codes", "frequency": 13 },
+        { "topic": "2.9 Self-complementing codes (Excess-3, 84-2-1)", "frequency": 11 },
+        { "topic": "2.10 Parity method for error detection", "frequency": 11 }
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "Boolean Algebra and Logic Gates",
+      "hours": 4,
+      "topics": [
+        { "topic": "3.1 Basic definition and properties of Boolean algebra", "frequency": 9 },
+        { "topic": "3.2 Theorems of Boolean algebra", "frequency": 9 },
+        { "topic": "3.3 De Morgan's theorem — proof and application", "frequency": 12 },
+        { "topic": "3.4 Logic gates and truth tables (AND, OR, NOT, XOR, XNOR)", "frequency": 10 },
+        { "topic": "3.5 Universality of NAND and NOR gates", "frequency": 14 },
+        { "topic": "3.6 Tri-state logic", "frequency": 7 }
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "Simplification of Boolean Functions",
+      "hours": 4,
+      "topics": [
+        { "topic": "4.1 Venn diagrams and test vectors", "frequency": 7 },
+        { "topic": "4.2 Karnaugh maps — up to five variables, SOP and POS minimization", "frequency": 16 },
+        { "topic": "4.3 Don't care conditions in K-map", "frequency": 14 },
+        { "topic": "4.4 NAND-NAND and NOR-NOR logic implementation", "frequency": 13 },
+        { "topic": "4.5 Practical design steps and minimum realization", "frequency": 7 }
+      ]
+    },
+    {
+      "unit": 5,
+      "title": "Combinational Logic",
+      "hours": 3,
+      "topics": [
+        { "topic": "5.1 Design procedure for combinational logic circuits", "frequency": 8 },
+        { "topic": "5.2 Half adder and full adder — design and implementation", "frequency": 13 },
+        { "topic": "5.3 Half subtractor and full subtractor; adder/subtractor circuit", "frequency": 11 },
+        { "topic": "5.4 Code converters (BCD, Gray, Excess-3, 2421, 84-2-1)", "frequency": 12 },
+        { "topic": "5.5 Multilevel NAND and NOR circuits", "frequency": 6 },
+        { "topic": "5.6 Parity generator and checker circuits", "frequency": 11 }
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "MSI and LSI Components in Combinational Logic Design",
+      "hours": 4,
+      "topics": [
+        { "topic": "6.1 Binary adder (ripple carry) and BCD adder", "frequency": 9 },
+        { "topic": "6.2 Magnitude comparator — 3-bit and 4-bit design", "frequency": 11 },
+        { "topic": "6.3 Decoder and encoder — design and function implementation", "frequency": 12 },
+        { "topic": "6.4 Multiplexer (MUX) — 4:1, 8:1; function implementation using MUX", "frequency": 15 },
+        { "topic": "6.5 Demultiplexer (DEMUX)", "frequency": 8 },
+        { "topic": "6.6 Read-Only Memory (ROM) — implementation of Boolean functions", "frequency": 8 },
+        { "topic": "6.7 Programmable Logic Array (PLA) — program table and implementation", "frequency": 10 },
+        { "topic": "6.8 Programmable Array Logic (PAL)", "frequency": 5 }
+      ]
+    },
+    {
+      "unit": 7,
+      "title": "Sequential Logic",
+      "hours": 6,
+      "topics": [
+        { "topic": "7.1 Event-driven model and state diagram", "frequency": 9 },
+        { "topic": "7.2 SR flip-flop — logic diagram, truth table, excitation table", "frequency": 11 },
+        { "topic": "7.3 JK flip-flop — logic diagram, characteristic table, characteristic equation", "frequency": 16 },
+        { "topic": "7.4 D flip-flop — truth table, logic diagram, characteristic equation", "frequency": 10 },
+        { "topic": "7.5 T flip-flop and flip-flop conversions", "frequency": 10 },
+        { "topic": "7.6 Master-slave flip-flops; edge-triggered devices", "frequency": 7 },
+        { "topic": "7.7 Analysis of clocked sequential circuits", "frequency": 8 },
+        { "topic": "7.8 State reduction and state assignment", "frequency": 8 },
+        { "topic": "7.9 Sequential circuit design from state diagram (JK, SR, D, T flip-flops)", "frequency": 14 },
+        { "topic": "7.10 Synchronous and asynchronous logic", "frequency": 9 },
+        { "topic": "7.11 Two-phase asynchronous logic", "frequency": 4 }
+      ]
+    },
+    {
+      "unit": 8,
+      "title": "Registers, Counters and Memory Unit",
+      "hours": 6,
+      "topics": [
+        { "topic": "8.1 Registers — types and operation", "frequency": 8 },
+        { "topic": "8.2 Shift registers — SISO, SIPO, PISO, PIPO with timing diagrams", "frequency": 15 },
+        { "topic": "8.3 Ripple (asynchronous) counter design", "frequency": 10 },
+        { "topic": "8.4 Synchronous counter design (up, down, up/down) using JK and T flip-flops", "frequency": 15 },
+        { "topic": "8.5 Johnson counter and Ring counter", "frequency": 9 },
+        { "topic": "8.6 Modulo-N counter design", "frequency": 10 },
+        { "topic": "8.7 Random Access Memory (RAM) — R/W operation, memory decoding", "frequency": 9 },
+        { "topic": "8.8 Output hazards and races", "frequency": 7 }
+      ]
+    },
+    {
+      "unit": 9,
+      "title": "Arithmetic Logic Units",
+      "hours": 9,
+      "topics": [
+        { "topic": "9.1 Nibble adder", "frequency": 7 },
+        { "topic": "9.2 Adder/subtractor unit", "frequency": 11 },
+        { "topic": "9.3 Design of Arithmetic Logic Unit (ALU) — 8 arithmetic and 4 logical operations", "frequency": 15 },
+        { "topic": "9.4 Status register and flags", "frequency": 10 },
+        { "topic": "9.5 Design of combinational shifter", "frequency": 9 },
+        { "topic": "9.6 Processor unit — accumulator design and system configuration", "frequency": 7 },
+        { "topic": "9.7 Memory, program counters, accumulator and instruction register", "frequency": 6 }
+      ]
+    }
+  ],
+  "laboratory_work": [
+    "Familiarization with logic gates.",
+    "Encoders and decoders.",
+    "Multiplexer and demultiplexer.",
+    "Design of simple combinational circuits.",
+    "Design of adder/subtractor.",
+    "Design of flip-flop.",
+    "Design of counter.",
+    "Clock driven sequential circuits.",
+    "Conversion of parallel data into serial format.",
+    "Generation of timing signal for sequential system."
+  ],
+  "references": [
+    "M. Mano, Digital Logic and Computer Design, Prentice Hall of India, 1998.",
+    "M. Mano, Computer System Architecture, Prentice Hall of India, 1998.",
+    "M. Mano, Digital Design, Prentice Hall of India, 1988."
+  ]
+}
