@@ -7,107 +7,107 @@
   "pass_marks": 45,
   "papers": [
     {
-  "id": "2025-F",
-  "year": "2025",
-  "semester": "Fall",
-  "questions": [
-    {
-      "number": "1",
-      "sub_no": "a",
-      "marks": 7,
-      "question": "Define thermodynamic system and explain its types along with suitable examples."
-    },
-    {
-      "number": "1",
-      "sub_no": "b",
-      "marks": 8,
-      "question": "In a non-flow reversible process, the pressure and volume are related by the expression, P = (V² + 6)/V where P is in bar and V is in m³. What amount of work will be done when volume changes from 2 m³ to 4 m³?"
-    },
-    {
-      "number": "2",
-      "sub_no": "a",
-      "marks": 7,
-      "question": "A vessel contains one kg of steam which contains 1/3 liquid and 2/3 vapor by volume. The temperature of the steam is 151.87°C. Find the quality, specific volume, and specific enthalpy of the mixture."
-    },
-    {
-      "number": "2",
-      "sub_no": "b",
-      "marks": 8,
-      "question": "State the first law of thermodynamics and prove that for non-flow process, it leads to Q = W + ΔU."
-    },
-    {
-      "number": "3",
-      "sub_no": "a",
-      "marks": 7,
-      "question": "Air at 100 kPa and 127°C enters an adiabatic diffuser at a rate of 1.5 kg/s and leaves at a pressure of 150 kPa. The velocity of the air is decreased from 250 m/s to 50 m/s as it passes through the diffuser. Determine the exit temperature of the air and the exit area of the diffuser. [For air, take R = 287 J/kg.K, Cp = 1005 J/kg.K]. Assume suitable data if necessary."
-    },
-    {
-      "number": "3",
-      "sub_no": "b",
-      "marks": 8,
-      "question": "Briefly explain the working principle of heat pump and refrigerator with schematic diagrams."
-    },
-    {
-      "number": "4",
-      "sub_no": "a",
-      "marks": 8,
-      "question": "Derive an expression for change of entropy during polytropic process."
-    },
-    {
-      "number": "4",
-      "sub_no": "b",
-      "marks": 7,
-      "question": "Derive an expression for efficiency of Rankine cycle along with P-v and T-s diagrams. Also, explain how this efficiency can be increased."
-    },
-    {
-      "number": "5",
-      "sub_no": "a",
-      "marks": 7,
-      "question": "An engine works on air standard Diesel cycle whose compression ratio is 14. The pressure and temperature at the beginning of the cycle are 1 bar and 300 K respectively. The maximum temperature of the cycle is limited to 2500°C. Determine the thermal efficiency of the cycle. [For air take γ = 1.4, R = 287 J/kg.K, Cv = 718 J/kg.K, Cp = 1005 J/kg.K]"
-    },
-    {
-      "number": "5",
-      "sub_no": "b",
-      "marks": 8,
-      "question": "Define Newton's law of cooling, Reynolds number, Kirchhoff's law and black body."
-    },
-    {
-      "number": "6",
-      "sub_no": "a",
-      "marks": 7,
-      "question": "Define Newton's law of cooling, Reynolds number, Kirchhoff's law and black body."
-    },
-    {
-      "number": "6",
-      "sub_no": "b",
-      "marks": 8,
-      "question": "Sketch the thermal circuit for the given composite wall and calculate its total thermal resistance. For a temperature difference of 200°C across the wall, calculate the rate of heat transfer through the wall.",
-      "fig_url": "BE_COMPUTER/Sem_II/Thermal/img/2023-S-6b.png",
-      "fig_description": "Composite wall with 5 layers A, B, C, D, E. Layers B and C are parallel in the middle section; E is a separate bottom layer. kA=150 W/m°C LA=3cm; kB=30 W/m°C LB=8cm; kC=50 W/m°C LC=8cm; kD=70 W/m°C LD=5cm; kE=25 W/m°C LE=16cm. AA=AD=2AB=2AC=0.1m², AE=0.025m²."
-    },
-    {
-      "number": "7",
-      "instruction": "Write short notes on: (Any two) 2×5",
-      "options": [
+      "id": "2025-F",
+      "year": "2025",
+      "semester": "Fall",
+      "questions": [
         {
+          "number": "1",
           "sub_no": "a",
-          "marks": 5,
-          "question": "Refrigeration cycle."
+          "marks": 7,
+          "question": "Define thermodynamic system and explain its types along with suitable examples."
         },
         {
+          "number": "1",
           "sub_no": "b",
-          "marks": 5,
-          "question": "Fourier laws of Conduction."
+          "marks": 8,
+          "question": "In a non-flow reversible process, the pressure and volume are related by the expression, P = (V² + 6)/V where P is in bar and V is in m³. What amount of work will be done when volume changes from 2 m³ to 4 m³?"
         },
         {
-          "sub_no": "c",
-          "marks": 5,
-          "question": "Principle of increase of entropy."
+          "number": "2",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "A vessel contains one kg of steam which contains 1/3 liquid and 2/3 vapor by volume. The temperature of the steam is 151.87°C. Find the quality, specific volume, and specific enthalpy of the mixture."
+        },
+        {
+          "number": "2",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "State the first law of thermodynamics and prove that for non-flow process, it leads to Q = W + ΔU."
+        },
+        {
+          "number": "3",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Air at 100 kPa and 127°C enters an adiabatic diffuser at a rate of 1.5 kg/s and leaves at a pressure of 150 kPa. The velocity of the air is decreased from 250 m/s to 50 m/s as it passes through the diffuser. Determine the exit temperature of the air and the exit area of the diffuser. [For air, take R = 287 J/kg.K, Cp = 1005 J/kg.K]. Assume suitable data if necessary."
+        },
+        {
+          "number": "3",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "Briefly explain the working principle of heat pump and refrigerator with schematic diagrams."
+        },
+        {
+          "number": "4",
+          "sub_no": "a",
+          "marks": 8,
+          "question": "Derive an expression for change of entropy during polytropic process."
+        },
+        {
+          "number": "4",
+          "sub_no": "b",
+          "marks": 7,
+          "question": "Derive an expression for efficiency of Rankine cycle along with P-v and T-s diagrams. Also, explain how this efficiency can be increased."
+        },
+        {
+          "number": "5",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "An engine works on air standard Diesel cycle whose compression ratio is 14. The pressure and temperature at the beginning of the cycle are 1 bar and 300 K respectively. The maximum temperature of the cycle is limited to 2500°C. Determine the thermal efficiency of the cycle. [For air take γ = 1.4, R = 287 J/kg.K, Cv = 718 J/kg.K, Cp = 1005 J/kg.K]"
+        },
+        {
+          "number": "5",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "Define Newton's law of cooling, Reynolds number, Kirchhoff's law and black body."
+        },
+        {
+          "number": "6",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Define Newton's law of cooling, Reynolds number, Kirchhoff's law and black body."
+        },
+        {
+          "number": "6",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "Sketch the thermal circuit for the given composite wall and calculate its total thermal resistance. For a temperature difference of 200°C across the wall, calculate the rate of heat transfer through the wall.",
+          "fig_url": "BE_COMPUTER/Sem_II/Thermal/img/2023-S-6b.png",
+          "fig_description": "Composite wall with 5 layers A, B, C, D, E. Layers B and C are parallel in the middle section; E is a separate bottom layer. kA=150 W/m°C LA=3cm; kB=30 W/m°C LB=8cm; kC=50 W/m°C LC=8cm; kD=70 W/m°C LD=5cm; kE=25 W/m°C LE=16cm. AA=AD=2AB=2AC=0.1m², AE=0.025m²."
+        },
+        {
+          "number": "7",
+          "instruction": "Write short notes on: (Any two) 2×5",
+          "options": [
+            {
+              "sub_no": "a",
+              "marks": 5,
+              "question": "Refrigeration cycle."
+            },
+            {
+              "sub_no": "b",
+              "marks": 5,
+              "question": "Fourier laws of Conduction."
+            },
+            {
+              "sub_no": "c",
+              "marks": 5,
+              "question": "Principle of increase of entropy."
+            }
+          ]
         }
       ]
-    }
-  ]
-},
+    },
     {
       "id": "2025-SP",
       "year": "2025",
@@ -203,6 +203,110 @@
               "sub_no": "c",
               "marks": 5,
               "question": "Lost work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2024-F",
+      "year": "2024",
+      "semester": "Fall",
+      "questions": [
+        {
+          "number": "1",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "What are the differences between the classical and the statistical approaches to thermodynamics?"
+        },
+        {
+          "number": "1",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "A system undergoes linear expansion from a pressure of 1000 kPa to a final pressure of 200 kPa. If the initial volume is 0.2 m3 and the final volume is 0.8 m3, calculate the work done if the pressure and volume are related linearly during the process."
+        },
+        {
+          "number": "2",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Define the terms quality of mixture, saturation temperature, saturation pressure, critical temperature, critical point and triple point."
+        },
+        {
+          "number": "2",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "A 1.6 m3 rigid tank contains steam at 150°C. One-third of the volume is in the liquid phase and the rest is in the vapor form. Determine: (i) the pressure of the steam, (ii) the quality of the saturated mixture, (iii) the density of the mixture."
+        },
+        {
+          "number": "3",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Starting from the steady flow energy equation, write down the assumptions for an ideal diffuser and derive the expression for its energy equation."
+        },
+        {
+          "number": "3",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "Steam enters a nozzle at 500°C and 800 kPa with a velocity of 15 m/s, and leaves at 300°C and 200 kPa while losing heat at a rate of 30 kW. For an inlet area of 750 cm2, determine the velocity and the volume flow rate of the steam at the nozzle exit."
+        },
+        {
+          "number": "4",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Describe the Kelvin-Planck and Clausius statements of the Second Law of Thermodynamics."
+        },
+        {
+          "number": "4",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "Derive an expression for entropy change of an ideal gas for an isothermal process."
+        },
+        {
+          "number": "5",
+          "sub_no": "a",
+          "marks": 8,
+          "question": "An ideal Brayton cycle has a pressure ratio of 10. The temperatures of air at the compressor and turbine inlets are 300 K and 1200 K respectively. Determine its thermal efficiency and the mass flow rate of air required to produce a net power output of 80 MW.",
+          "or_alternative": {
+            "marks": 8,
+            "question": "Explain the working principle of an ideal Otto cycle with diagrams."
+          }
+        },
+        {
+          "number": "5",
+          "sub_no": "b",
+          "marks": 7,
+          "question": "Give seven differences between Otto cycle and Diesel cycle."
+        },
+        {
+          "number": "6",
+          "sub_no": "a",
+          "marks": 7,
+          "question": "Explain the modes of heat transfer with examples."
+        },
+        {
+          "number": "6",
+          "sub_no": "b",
+          "marks": 8,
+          "question": "A steam pipe 20 cm inside diameter and 25 cm outside diameter is covered with two layers of insulation. The thickness of the first and second layers are 3 cm and 6 cm respectively and their corresponding thermal conductivities are 0.15 and 0.08 W/mK. The conductivity of the pipe material is 60 W/mK. The temperature of the inner surface of the steam pipe is 400°C and that of the outer surface of insulation is 25°C. Find the quantity of heat lost per meter length of the pipe. Also find the percentage decrease in the heat loss with two layers of insulation compared to only the first layer of insulation."
+        },
+        {
+          "number": "7",
+          "instruction": "Write short notes on: (Any two)",
+          "options": [
+            {
+              "sub_no": "a",
+              "marks": 5,
+              "question": "Refrigeration cycle."
+            },
+            {
+              "sub_no": "b",
+              "marks": 5,
+              "question": "Heat and work."
+            },
+            {
+              "sub_no": "c",
+              "marks": 5,
+              "question": "Reynold's number."
             }
           ]
         }

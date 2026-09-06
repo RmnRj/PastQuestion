@@ -3,7 +3,7 @@
     {
       "question": "Derive an expression for entropy change of an ideal gas. Explain entropy change for isothermal process.",
       "topic": "5.3 Entropy Change of Ideal Gas — Isothermal, Polytropic, Adiabatic",
-      "freq": 14,
+      "freq": 15,
       "papers": [
         "2025-SP",
         "2022-F",
@@ -18,13 +18,14 @@
         "2014-SP",
         "2013-F",
         "2013-SP",
-        "2012-SP"
+        "2012-SP",
+        "2024-F"
       ]
     },
     {
       "question": "Write short notes on refrigeration cycle (vapour compression refrigeration cycle).",
       "topic": "6.8 Vapour Compression Refrigeration Cycle; COP",
-      "freq": 16,
+      "freq": 17,
       "papers": [
         "2025-SP",
         "2023-SP",
@@ -41,7 +42,8 @@
         "2014-SP",
         "2013-F",
         "2013-SP",
-        "2012-SP"
+        "2012-SP",
+        "2024-F"
       ]
     },
     {
@@ -83,7 +85,7 @@
     {
       "question": "Starting from steady flow energy equation (SFEE), derive equations for turbine and nozzle stating necessary assumptions.",
       "topic": "3.4 SFEE Applications — Turbine, Nozzle, Compressor, Throttling",
-      "freq": 11,
+      "freq": 12,
       "papers": [
         "2025-SP",
         "2023-SP",
@@ -95,7 +97,8 @@
         "2015-SP",
         "2014-F",
         "2013-SP",
-        "2012-SP"
+        "2012-SP",
+        "2024-F"
       ]
     },
     {
@@ -134,7 +137,7 @@
     {
       "question": "Determine the boundary work / work done during a polytropic or given process from a P-V relationship.",
       "topic": "1.8 Boundary Work — Polytropic, Isothermal, Constant Pressure",
-      "freq": 11,
+      "freq": 12,
       "papers": [
         "2025-SP",
         "2023-SP",
@@ -146,7 +149,8 @@
         "2015-F",
         "2014-F",
         "2013-F",
-        "2012-SP"
+        "2012-SP",
+        "2024-F"
       ]
     },
     {
@@ -185,7 +189,7 @@
     {
       "question": "A vessel contains liquid water and water vapor mixture in equilibrium. Calculate mass/volume of liquid and vapor.",
       "topic": "2.4 Steam Tables — Wet, Saturated, Superheated Steam",
-      "freq": 10,
+      "freq": 11,
       "papers": [
         "2022-F",
         "2021-F",
@@ -196,13 +200,14 @@
         "2016-SP",
         "2015-F",
         "2014-SP",
-        "2013-F"
+        "2013-F",
+        "2024-F"
       ]
     },
     {
       "question": "Steam enters a nozzle and leaves at different conditions while losing heat. Determine the exit velocity and flow area.",
       "topic": "3.5 Nozzle and Compressor Numerical Problems",
-      "freq": 8,
+      "freq": 9,
       "papers": [
         "2022-F",
         "2021-F",
@@ -211,7 +216,8 @@
         "2016-SP",
         "2013-SP",
         "2012-SP",
-        "2025-SP"
+        "2025-SP",
+        "2024-F"
       ]
     },
     {
@@ -318,7 +324,7 @@
     {
       "question": "What are the differences between Otto cycle and Diesel cycle?",
       "topic": "6.6 Comparison Between Otto and Diesel Cycles; SI vs CI Engines",
-      "freq": 8,
+      "freq": 9,
       "papers": [
         "2021-F",
         "2018-F",
@@ -327,7 +333,8 @@
         "2015-SP",
         "2014-F",
         "2013-F",
-        "2012-F"
+        "2012-F",
+        "2024-F"
       ]
     },
     {
@@ -379,7 +386,7 @@
     {
       "question": "A steam pipe covered with two layers of insulation — find heat loss per meter length and percentage decrease compared to single layer.",
       "topic": "7.3 Conduction Through Composite Hollow Cylinder (Insulated Pipe)",
-      "freq": 7,
+      "freq": 8,
       "papers": [
         "2021-F",
         "2020-F",
@@ -387,7 +394,8 @@
         "2018-SP",
         "2017-F",
         "2016-SP",
-        "2012-F"
+        "2012-F",
+        "2024-F"
       ]
     },
     {
@@ -407,7 +415,7 @@
     {
       "question": "State the second law of thermodynamics (Kelvin-Planck and Clausius statements). What are the limitations of the first law?",
       "topic": "4.1 Limitations of First Law; Emergence of Second Law",
-      "freq": 8,
+      "freq": 9,
       "papers": [
         "2025-SP",
         "2022-F",
@@ -416,7 +424,8 @@
         "2018-SP",
         "2016-SP",
         "2015-SP",
-        "2012-F"
+        "2012-F",
+        "2024-F"
       ]
     },
     {
@@ -452,7 +461,7 @@
     {
       "question": "Why are non-dimensional numbers (Reynolds, Prandtl, Nusselt) important in heat transfer applications?",
       "topic": "7.6 Dimensionless Numbers — Reynolds, Prandtl, Nusselt",
-      "freq": 7,
+      "freq": 8,
       "papers": [
         "2021-F",
         "2020-F",
@@ -460,7 +469,8 @@
         "2017-F",
         "2016-SP",
         "2015-F",
-        "2012-F"
+        "2012-F",
+        "2024-F"
       ]
     },
     {
@@ -486,6 +496,54 @@
         "2015-SP",
         "2013-SP",
         "2012-F"
+      ]
+    },
+    {
+      "question": "Differentiate between the classical (macroscopic) and statistical (microscopic) approaches to thermodynamics.",
+      "topic": "1.9 Macroscopic and Microscopic (Classical and Statistical) Approaches to Thermodynamics",
+      "freq": 1,
+      "papers": [
+        "2024-F"
+      ]
+    },
+    {
+      "question": "Define quality of mixture, saturation temperature, saturation pressure, critical temperature, critical point and triple point.",
+      "topic": "2.2/2.3 Definitions — Quality, Saturation Properties, Critical Point, Triple Point",
+      "freq": 1,
+      "papers": [
+        "2024-F"
+      ]
+    },
+    {
+      "question": "A Brayton cycle numerical problem — given the pressure ratio and compressor/turbine inlet temperatures, determine thermal efficiency and the mass flow rate of air for a given net power output.",
+      "topic": "6.3 Brayton Cycle — Numerical Problems (Pressure Ratio, Efficiency, Mass Flow Rate)",
+      "freq": 1,
+      "papers": [
+        "2024-F"
+      ]
+    },
+    {
+      "question": "Explain the working principle of an ideal Otto cycle with diagrams.",
+      "topic": "6.4 Otto Cycle — Working Principle and Diagrams",
+      "freq": 1,
+      "papers": [
+        "2024-F"
+      ]
+    },
+    {
+      "question": "Explain the modes of heat transfer with examples.",
+      "topic": "7.1 Modes of Heat Transfer — Conduction, Convection, Radiation",
+      "freq": 1,
+      "papers": [
+        "2024-F"
+      ]
+    },
+    {
+      "question": "Write short notes on heat and work — their similarities and differences.",
+      "topic": "3.2 Heat and Work — Similarities and Differences",
+      "freq": 1,
+      "papers": [
+        "2024-F"
       ]
     }
   ]
